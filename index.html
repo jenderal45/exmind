@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <div class="container">
-        <div class="logo">
-            <img src="Logo Exmind Digital.jpg" alt="Exmind Digital Logo">
-        </div>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exmind Digital - Digital Agency</title>
+
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -17,30 +14,44 @@
             color: #ffffff;
             line-height: 1.6;
         }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         header {
             background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-            padding: 100px 0;
+            padding: 80px 0 100px;
             text-align: center;
         }
+
+        /* LOGO */
+        .logo img {
+            width: 140px;
+            height: auto;
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 10px rgba(3, 218, 198, 0.4));
+        }
+
         h1 {
             font-size: 3rem;
             margin-bottom: 20px;
             color: #03dac6;
         }
+
         p {
             font-size: 1.2rem;
             margin-bottom: 40px;
         }
+
         .cta-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
         }
+
         .btn {
             padding: 15px 30px;
             border: none;
@@ -50,37 +61,45 @@
             text-decoration: none;
             transition: background-color 0.3s;
         }
+
         .btn-primary {
             background-color: #03dac6;
             color: #121212;
         }
+
         .btn-primary:hover {
             background-color: #00b8a6;
         }
+
         .btn-secondary {
             background-color: transparent;
             color: #03dac6;
             border: 2px solid #03dac6;
         }
+
         .btn-secondary:hover {
             background-color: #03dac6;
             color: #121212;
         }
+
         .features {
             padding: 80px 0;
             background-color: #1e1e1e;
         }
+
         .features h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
             color: #03dac6;
         }
+
         .feature-cards {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
+
         .card {
             background-color: #2a2a2a;
             border-radius: 10px;
@@ -90,24 +109,29 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+
         .card h3 {
             color: #03dac6;
             margin-bottom: 15px;
         }
+
         .contact {
             padding: 80px 0;
             background-color: #121212;
         }
+
         .contact h2 {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
             color: #03dac6;
         }
+
         form {
             max-width: 600px;
             margin: 0 auto;
         }
+
         input, textarea {
             width: 100%;
             padding: 15px;
@@ -118,9 +142,12 @@
             color: #ffffff;
             font-size: 1rem;
         }
-        input::placeholder, textarea::placeholder {
+
+        input::placeholder,
+        textarea::placeholder {
             color: #888;
         }
+
         button[type="submit"] {
             width: 100%;
             padding: 15px;
@@ -130,11 +157,12 @@
             border-radius: 5px;
             font-size: 1rem;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
+
         button[type="submit"]:hover {
             background-color: #00b8a6;
         }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -143,56 +171,64 @@
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1>Elevate Your Brand with Exmind Digital</h1>
-            <p>Grow your brand through content, social media, technology, and digital performance strategies.</p>
-            <div class="cta-buttons">
-                <a href="#features" class="btn btn-primary">View Our Services</a>
-                <a href="#contact" class="btn btn-secondary">Start a Project</a>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="Logo Exmind Digital.jpg" alt="Exmind Digital Logo">
+        </div>
+
+        <h1>Elevate Your Brand with Exmind Digital</h1>
+        <p>Grow your brand through content, social media, technology, and digital performance strategies.</p>
+
+        <div class="cta-buttons">
+            <a href="#features" class="btn btn-primary">View Our Services</a>
+            <a href="#contact" class="btn btn-secondary">Start a Project</a>
+        </div>
+    </div>
+</header>
+
+<section id="features" class="features">
+    <div class="container">
+        <h2>Our Expertise</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Content</h3>
+                <p>Create compelling content that captivates audiences and drives conversions.</p>
+            </div>
+            <div class="card">
+                <h3>Social Media</h3>
+                <p>Strategize and manage social media campaigns for maximum impact and growth.</p>
+            </div>
+            <div class="card">
+                <h3>Technology</h3>
+                <p>Leverage cutting-edge tech to optimize your digital presence and operations.</p>
+            </div>
+            <div class="card">
+                <h3>Digital Performance</h3>
+                <p>Analyze and enhance performance metrics to achieve measurable results.</p>
             </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Our Expertise</h2>
-            <div class="feature-cards">
-                <div class="card">
-                    <h3>Content</h3>
-                    <p>Create compelling content that captivates audiences and drives conversions.</p>
-                </div>
-                <div class="card">
-                    <h3>Social Media</h3>
-                    <p>Strategize and manage social media campaigns for maximum impact and growth.</p>
-                </div>
-                <div class="card">
-                    <h3>Technology</h3>
-                    <p>Leverage cutting-edge tech to optimize your digital presence and operations.</p>
-                </div>
-                <div class="card">
-                    <h3>Digital Performance</h3>
-                    <p>Analyze and enhance performance metrics to achieve measurable results.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </section>
+<footer>
+    <p>&copy; 2023 Exmind Digital. All rights reserved.</p>
+</footer>
 
-    <footer>
-        <p>&copy; 2023 Exmind Digital. All rights reserved.</p>
-    </footer>
 </body>
 </html>
