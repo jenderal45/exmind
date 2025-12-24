@@ -6,12 +6,22 @@
     <title>Exmind Digital - Digital Agency</title>
 
     <style>
+        :root {
+            --primary: #2ED8C3;      /* warna logo utama */
+            --primary-dark: #1FB9A6; /* hover / accent */
+            --dark-bg: #0F172A;      /* background utama */
+            --dark-section: #111827;/* section */
+            --card-bg: #1F2933;      /* card */
+            --text-light: #E5E7EB;
+            --text-muted: #9CA3AF;
+        }
+
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
-            color: #ffffff;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
             line-height: 1.6;
         }
 
@@ -22,28 +32,35 @@
         }
 
         header {
-            background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+            background: radial-gradient(circle at top, rgba(46,216,195,0.25), transparent 60%),
+                        linear-gradient(135deg, #0F172A, #020617);
             padding: 80px 0 100px;
             text-align: center;
         }
 
         /* LOGO */
         .logo img {
-            width: 140px;
+            width: 150px;
             height: auto;
             margin-bottom: 25px;
-            filter: drop-shadow(0 0 10px rgba(3, 218, 198, 0.4));
+            filter: drop-shadow(0 0 18px rgba(46,216,195,0.6));
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.06);
         }
 
         h1 {
             font-size: 3rem;
             margin-bottom: 20px;
-            color: #03dac6;
+            color: var(--primary);
         }
 
         p {
             font-size: 1.2rem;
             margin-bottom: 40px;
+            color: var(--text-muted);
         }
 
         .cta-buttons {
@@ -53,78 +70,85 @@
         }
 
         .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
+            padding: 15px 34px;
+            border-radius: 8px;
             font-size: 1rem;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
         }
 
         .btn-primary {
-            background-color: #03dac6;
-            color: #121212;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #022c2a;
+            box-shadow: 0 10px 30px rgba(46,216,195,0.35);
         }
 
         .btn-primary:hover {
-            background-color: #00b8a6;
+            transform: translateY(-2px);
+            box-shadow: 0 14px 40px rgba(46,216,195,0.55);
         }
 
         .btn-secondary {
             background-color: transparent;
-            color: #03dac6;
-            border: 2px solid #03dac6;
+            color: var(--primary);
+            border: 2px solid var(--primary);
         }
 
         .btn-secondary:hover {
-            background-color: #03dac6;
-            color: #121212;
+            background-color: var(--primary);
+            color: #022c2a;
         }
 
         .features {
-            padding: 80px 0;
-            background-color: #1e1e1e;
+            padding: 90px 0;
+            background-color: var(--dark-section);
         }
 
         .features h2 {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #03dac6;
+            font-size: 2.6rem;
+            margin-bottom: 60px;
+            color: var(--primary);
         }
 
         .feature-cards {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
         .card {
-            background-color: #2a2a2a;
-            border-radius: 10px;
-            padding: 30px;
+            background-color: var(--card-bg);
+            border-radius: 14px;
+            padding: 35px;
             margin: 20px;
-            width: 250px;
+            width: 260px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 60px rgba(46,216,195,0.25);
         }
 
         .card h3 {
-            color: #03dac6;
+            color: var(--primary);
             margin-bottom: 15px;
         }
 
         .contact {
-            padding: 80px 0;
-            background-color: #121212;
+            padding: 90px 0;
+            background-color: var(--dark-bg);
         }
 
         .contact h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             margin-bottom: 50px;
-            color: #03dac6;
+            color: var(--primary);
         }
 
         form {
@@ -136,38 +160,39 @@
             width: 100%;
             padding: 15px;
             margin-bottom: 20px;
-            border: 1px solid #03dac6;
-            border-radius: 5px;
-            background-color: #2a2a2a;
-            color: #ffffff;
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            background-color: #020617;
+            color: var(--text-light);
             font-size: 1rem;
         }
 
         input::placeholder,
         textarea::placeholder {
-            color: #888;
+            color: var(--text-muted);
         }
 
         button[type="submit"] {
             width: 100%;
             padding: 15px;
-            background-color: #03dac6;
-            color: #121212;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: #022c2a;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 1rem;
             cursor: pointer;
+            box-shadow: 0 10px 30px rgba(46,216,195,0.4);
         }
 
         button[type="submit"]:hover {
-            background-color: #00b8a6;
+            box-shadow: 0 14px 40px rgba(46,216,195,0.6);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: #1e1e1e;
-            color: #888;
+            padding: 25px;
+            background-color: #020617;
+            color: var(--text-muted);
         }
     </style>
 </head>
