@@ -1,351 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <!-- SEO BASIC -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exmind Digital | Digital Agency & Technology Partner</title>
-    <meta name="description" content="Exmind Digital adalah digital agency premium yang fokus pada social media, e-commerce, website, aplikasi, digital ads, dan multimedia.">
-    <meta name="keywords" content="Digital Agency, Social Media Management, Website Developer, Digital Ads, Multimedia">
-    <meta name="author" content="Exmind Digital">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- GOOGLE ANALYTICS -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
+<title>Exmind Digital | Enterprise Digital Agency</title>
 
-    <style>
-        :root {
-            --primary: #03dac6;
-            --primary-dark: #00b8a6;
-            --accent: #c9a14a; /* gold tone */
-            --bg-dark: #0f172a;
-            --bg-section: #111827;
-            --card-bg: #1f2933;
-            --text-main: #ffffff;
-            --text-muted: #9ca3af;
-        }
+<!-- SEO -->
+<meta name="description" content="Exmind Digital adalah agency enterprise untuk social media, e-commerce, website, aplikasi, digital ads, dan live streaming profesional.">
+<meta name="keywords" content="Digital Agency, Social Media Management, Website Developer, Digital Ads, Live Streaming">
+<meta name="author" content="Exmind Digital">
 
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<!-- Open Graph -->
+<meta property="og:title" content="Exmind Digital">
+<meta property="og:description" content="Enterprise Digital Agency for Growth & Performance">
+<meta property="og:type" content="website">
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+<!-- Google Analytics (PLACEHOLDER) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX');
+</script>
 
-        /* ===== NAVBAR ===== */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
+<style>
+/* ================= BRANDING GUIDELINE ================= */
+:root {
+    --primary: #1fb6b0;        /* Teal corporate */
+    --secondary: #0e2a47;      /* Deep blue */
+    --dark: #0b0f1a;
+    --light: #f5f7fa;
+    --gray: #9aa4b2;
+    --radius: 14px;
+    --font-main: 'Segoe UI', Inter, Arial, sans-serif;
+}
 
-        .nav-container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+* { box-sizing: border-box; }
 
-        .nav-logo img {
-            height: 45px;
-        }
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background: var(--dark);
+    color: var(--light);
+    line-height: 1.7;
+}
 
-        .nav-menu a {
-            margin-left: 25px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-        }
+/* ================= NAVBAR ================= */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(11,15,26,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
 
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        /* ===== HERO ===== */
-        header {
-            background: linear-gradient(135deg, #020617, #020617cc),
-            url("https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1600&q=80");
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            padding: 120px 20px;
-        }
+.nav-logo img {
+    height: 40px;
+}
 
-        .hero-logo img {
-            width: 150px;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 12px rgba(3,218,198,.5));
-        }
+.nav-menu a {
+    color: var(--light);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+}
 
-        header h1 {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
+.nav-menu a:hover {
+    color: var(--primary);
+}
 
-        header p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: auto auto 40px;
-            color: var(--text-muted);
-        }
+/* ================= HERO ================= */
+header {
+    padding: 100px 20px;
+    text-align: center;
+    background: radial-gradient(circle at top, #14243d, #06080f);
+}
 
-        .cta {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+header h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
 
-        .btn {
-            padding: 15px 35px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: .3s;
-        }
+header p {
+    max-width: 720px;
+    margin: auto;
+    color: var(--gray);
+    font-size: 1.2rem;
+}
 
-        .btn-primary {
-            background: var(--primary);
-            color: #020617;
-        }
+.hero-cta {
+    margin-top: 40px;
+}
 
-        .btn-primary:hover {
-            background: var(--primary-dark);
-        }
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 10px;
+}
 
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
+.btn-primary {
+    background: var(--primary);
+    color: #002b2b;
+}
 
-        .btn-outline:hover {
-            background: var(--primary);
-            color: #020617;
-        }
+.btn-secondary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
 
-        /* ===== SECTION ===== */
-        section {
-            padding: 90px 20px;
-        }
+/* ================= SECTION ================= */
+section {
+    padding: 90px 20px;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
 
-        section h2 {
-            text-align: center;
-            font-size: 2.6rem;
-            margin-bottom: 20px;
-            color: var(--primary);
-        }
+/* ================= PRODUCTS ================= */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+    gap: 30px;
+}
 
-        section .subtitle {
-            text-align: center;
-            max-width: 700px;
-            margin: auto auto 60px;
-            color: var(--text-muted);
-        }
+.product {
+    background: #111827;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform .3s;
+}
 
-        /* ===== PRODUCTS ===== */
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 30px;
-        }
+.product:hover {
+    transform: translateY(-6px);
+}
 
-        .product-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: transform .3s;
-        }
+.product img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
 
-        .product-card:hover {
-            transform: translateY(-8px);
-        }
+.product-content {
+    padding: 25px;
+}
 
-        .product-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
+.product h3 {
+    color: var(--primary);
+}
 
-        .product-content {
-            padding: 25px;
-        }
+/* ================= FUNNEL ================= */
+.funnel {
+    background: linear-gradient(135deg, #0e2a47, #091522);
+    border-radius: var(--radius);
+    padding: 50px;
+    text-align: center;
+}
 
-        .product-content h3 {
-            margin-top: 0;
-            color: var(--accent);
-        }
+/* ================= CONTACT ================= */
+form {
+    max-width: 600px;
+    margin: auto;
+}
 
-        .product-content p {
-            color: var(--text-muted);
-            font-size: .95rem;
-        }
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    background: #111827;
+    border: 1px solid #1f2937;
+    color: white;
+    border-radius: var(--radius);
+}
 
-        /* ===== CONTACT ===== */
-        .contact-form {
-            max-width: 600px;
-            margin: auto;
-        }
+/* ================= FOOTER ================= */
+footer {
+    background: #05070c;
+    padding: 30px;
+    text-align: center;
+    color: var(--gray);
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            border: 1px solid #374151;
-            background: #020617;
-            color: white;
-        }
-
-        button {
-            width: 100%;
-            padding: 15px;
-            background: var(--primary);
-            border: none;
-            font-size: 1rem;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background: var(--primary-dark);
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #020617;
-            padding: 30px;
-            text-align: center;
-            color: var(--text-muted);
-        }
-
-        /* ===== WHATSAPP FLOAT ===== */
-        .wa-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 999;
-        }
-
-        .wa-float img {
-            width: 55px;
-        }
-    </style>
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 10px 25px rgba(0,0,0,.3);
+}
+</style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav>
     <div class="nav-container">
         <div class="nav-logo">
-            <img src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital">
+            <img src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png">
         </div>
         <div class="nav-menu">
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="#produk">Produk</a>
+            <a href="#funnel">Solusi</a>
+            <a href="#kontak">Kontak</a>
         </div>
     </div>
 </nav>
 
 <!-- HERO -->
 <header>
-    <div class="hero-logo">
-        <img src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital Logo">
-    </div>
-    <h1>Digital Growth Partner for Modern Brands</h1>
-    <p>We help companies scale through strategy, technology, and digital performance with a corporate-grade execution.</p>
-    <div class="cta">
-        <a href="#services" class="btn btn-primary">Our Services</a>
-        <a href="#contact" class="btn btn-outline">Start Project</a>
+    <h1>Enterprise Digital Growth Partner</h1>
+    <p>Kami membantu perusahaan, brand, dan startup bertumbuh melalui strategi digital berbasis data, teknologi, dan kreativitas.</p>
+    <div class="hero-cta">
+        <a href="#kontak" class="btn btn-primary">Konsultasi Gratis</a>
+        <a href="#produk" class="btn btn-secondary">Lihat Layanan</a>
     </div>
 </header>
 
-<!-- SERVICES -->
-<section id="services">
-    <div class="container">
-        <h2>Our Products</h2>
-        <p class="subtitle">Integrated digital solutions tailored for startups, enterprises, and fast-growing brands.</p>
+<!-- PRODUCTS -->
+<section id="produk">
+<div class="container">
+<h2 style="text-align:center;color:var(--primary)">Produk & Layanan</h2>
+<div class="products">
 
-        <div class="products">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80">
-                <div class="product-content">
-                    <h3>Sosmed & E-Commerce Management</h3>
-                    <p>Strategic content, campaign optimization, and marketplace growth management.</p>
-                </div>
-            </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7">
+<div class="product-content">
+<h3>Sosmed & E-Commerce Management</h3>
+<p>Strategi konten, optimasi toko online, dan growth engagement.</p>
+</div>
+</div>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80">
-                <div class="product-content">
-                    <h3>Website & Application Development</h3>
-                    <p>Corporate websites, systems, and applications with scalable architecture.</p>
-                </div>
-            </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<div class="product-content">
+<h3>Website & Aplikasi Developer</h3>
+<p>Web, mobile app, dashboard enterprise & sistem internal.</p>
+</div>
+</div>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=80">
-                <div class="product-content">
-                    <h3>Digital Advertising</h3>
-                    <p>Performance-driven ads across Google, Meta, TikTok, and programmatic channels.</p>
-                </div>
-            </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1557838923-2985c318be48">
+<div class="product-content">
+<h3>Digital Advertising</h3>
+<p>Google Ads, Meta Ads, TikTok Ads berbasis funnel.</p>
+</div>
+</div>
 
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80">
-                <div class="product-content">
-                    <h3>Live Streaming & Multimedia</h3>
-                    <p>Professional streaming, video production, and creative multimedia solutions.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="product">
+<img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c">
+<div class="product-content">
+<h3>Live Streaming & Multimedia</h3>
+<p>Live commerce, webinar, podcast, dan konten profesional.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FUNNEL -->
+<section id="funnel">
+<div class="container funnel">
+<h2>Funnel Digital Terintegrasi</h2>
+<p>Awareness → Engagement → Conversion → Retention</p>
+</div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p class="subtitle">Tell us about your project and let’s build something impactful.</p>
-        <form class="contact-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea rows="5" placeholder="Project Description"></textarea>
-            <button type="submit">Submit Inquiry</button>
-        </form>
-    </div>
+<section id="kontak">
+<div class="container">
+<h2 style="text-align:center;color:var(--primary)">Hubungi Kami</h2>
+<form>
+<input placeholder="Nama Perusahaan">
+<input placeholder="Email">
+<textarea placeholder="Kebutuhan Digital Anda"></textarea>
+<button class="btn btn-primary" style="width:100%">Kirim</button>
+</form>
+</div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-    © 2025 Exmind Digital. All rights reserved.
+© 2025 Exmind Digital — Enterprise Digital Agency
 </footer>
 
-<!-- WHATSAPP FLOAT -->
-<a class="wa-float" href="https://wa.me/6289652435067" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/628XXXXXXXXXX" target="_blank">
+WhatsApp
 </a>
 
 </body>
