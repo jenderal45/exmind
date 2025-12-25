@@ -7,19 +7,19 @@
 
     <style>
         :root {
-            --primary: #f5c26b;
-            --primary-hover: #e0a93c;
-            --dark: #0f0f0f;
-            --dark-soft: #1b1b1b;
-            --text-light: #ffffff;
-            --text-muted: #bbbbbb;
+            --primary: #3a7bd5;
+            --secondary: #00d2ff;
+            --dark: #0f172a;
+            --dark-soft: #111827;
+            --card: #1e293b;
+            --text: #e5e7eb;
         }
 
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             background-color: var(--dark);
-            color: var(--text-light);
+            color: var(--text);
             line-height: 1.6;
         }
 
@@ -29,121 +29,123 @@
             padding: 0 20px;
         }
 
+        /* HEADER */
         header {
-            background: radial-gradient(circle at top, #2a2a2a, #0f0f0f);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             padding: 90px 0 110px;
             text-align: center;
         }
 
-        /* LOGO */
         .logo img {
             width: 150px;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 0 14px rgba(245, 194, 107, 0.5));
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));
         }
 
         h1 {
             font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            color: #ffffff;
         }
 
-        p {
-            font-size: 1.15rem;
-            color: var(--text-muted);
+        header p {
+            font-size: 1.2rem;
             margin-bottom: 40px;
+            color: #e0f2fe;
         }
 
         .cta-buttons {
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 15px 34px;
-            border-radius: 6px;
-            font-size: 1rem;
-            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 30px;
             font-weight: bold;
-            transition: all 0.3s ease;
+            text-decoration: none;
+            transition: 0.3s;
         }
 
         .btn-primary {
-            background: var(--primary);
-            color: #000;
-        }
-
-        .btn-primary:hover {
-            background: var(--primary-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            border: 2px solid var(--primary);
+            background: #ffffff;
             color: var(--primary);
         }
 
+        .btn-primary:hover {
+            background: #e0f2fe;
+        }
+
+        .btn-secondary {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+
         .btn-secondary:hover {
-            background: var(--primary);
-            color: #000;
+            background: #ffffff;
+            color: var(--primary);
         }
 
         /* PRODUK */
-        .products {
+        .features {
             padding: 90px 0;
             background-color: var(--dark-soft);
         }
 
-        .products h2 {
+        .features h2 {
             text-align: center;
-            color: var(--primary);
             font-size: 2.6rem;
             margin-bottom: 60px;
+            color: var(--secondary);
         }
 
-        .product-grid {
+        .feature-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
         }
 
-        .product-card {
-            background: #111;
-            padding: 35px 25px;
-            border-radius: 14px;
-            text-align: center;
-            border: 1px solid rgba(245,194,107,0.15);
-            transition: all 0.3s ease;
+        .card {
+            background: var(--card);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
         }
 
-        .product-card:hover {
+        .card:hover {
             transform: translateY(-8px);
-            border-color: var(--primary);
-            box-shadow: 0 12px 30px rgba(245,194,107,0.15);
         }
 
-        .product-card h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
         }
 
-        .product-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
+        .card-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-bottom: 12px;
         }
 
         /* CONTACT */
         .contact {
             padding: 90px 0;
+            background-color: var(--dark);
         }
 
         .contact h2 {
             text-align: center;
-            color: var(--primary);
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             margin-bottom: 50px;
+            color: var(--secondary);
         }
 
         form {
@@ -153,32 +155,35 @@
 
         input, textarea {
             width: 100%;
-            padding: 16px;
+            padding: 14px;
             margin-bottom: 20px;
-            border-radius: 6px;
-            border: 1px solid rgba(245,194,107,0.4);
-            background: #111;
-            color: #fff;
+            border-radius: 10px;
+            border: none;
+            background: var(--card);
+            color: var(--text);
         }
 
         button {
             width: 100%;
-            padding: 16px;
-            background: var(--primary);
+            padding: 14px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             border: none;
+            border-radius: 30px;
+            color: white;
+            font-size: 1rem;
             font-weight: bold;
             cursor: pointer;
         }
 
         button:hover {
-            background: var(--primary-hover);
+            opacity: 0.9;
         }
 
         footer {
             text-align: center;
             padding: 25px;
-            background: #080808;
-            color: #777;
+            background: #020617;
+            color: #94a3b8;
         }
     </style>
 </head>
@@ -190,40 +195,51 @@
         <div class="logo">
             <img src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital Logo">
         </div>
-
         <h1>Elevate Your Brand with Exmind Digital</h1>
-        <p>Creative, Technology & Performance-Driven Digital Agency</p>
-
+        <p>Digital solutions that connect strategy, creativity, and performance.</p>
         <div class="cta-buttons">
-            <a href="#products" class="btn btn-primary">Our Products</a>
-            <a href="#contact" class="btn btn-secondary">Start Project</a>
+            <a href="#features" class="btn btn-primary">Lihat Produk</a>
+            <a href="#contact" class="btn btn-secondary">Mulai Proyek</a>
         </div>
     </div>
 </header>
 
-<section id="products" class="products">
+<section id="features" class="features">
     <div class="container">
         <h2>Produk Kami</h2>
-        <div class="product-grid">
 
-            <div class="product-card">
-                <h3>Sosmed & E-commerce Management</h3>
-                <p>Kelola sosial media dan toko online secara profesional untuk meningkatkan engagement dan penjualan.</p>
+        <div class="feature-cards">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113" alt="Social Media Management">
+                <div class="card-content">
+                    <h3>Sosmed & E-commerce Management</h3>
+                    <p>Manajemen konten, engagement, dan penjualan digital yang terukur.</p>
+                </div>
             </div>
 
-            <div class="product-card">
-                <h3>Website & Aplikasi Developer</h3>
-                <p>Pembuatan website dan aplikasi modern, cepat, responsif, dan scalable.</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1581276879432-15e50529f34b" alt="Website Developer">
+                <div class="card-content">
+                    <h3>Website & Aplikasi Developer</h3>
+                    <p>Pengembangan website dan aplikasi modern, cepat, dan scalable.</p>
+                </div>
             </div>
 
-            <div class="product-card">
-                <h3>Digital Ads</h3>
-                <p>Strategi iklan digital berbasis data untuk hasil yang terukur dan optimal.</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1557838923-2985c318be48" alt="Digital Ads">
+                <div class="card-content">
+                    <h3>Digital Ads</h3>
+                    <p>Iklan Google, Meta, dan TikTok dengan optimasi ROI maksimal.</p>
+                </div>
             </div>
 
-            <div class="product-card">
-                <h3>Live Streaming & Multimedia</h3>
-                <p>Produksi live streaming, video, dan konten multimedia berkualitas tinggi.</p>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1607082349566-1870d33a67b5" alt="Live Streaming">
+                <div class="card-content">
+                    <h3>Live Streaming & Multimedia</h3>
+                    <p>Produksi live streaming, video branding, dan konten multimedia.</p>
+                </div>
             </div>
 
         </div>
@@ -232,12 +248,12 @@
 
 <section id="contact" class="contact">
     <div class="container">
-        <h2>Contact Us</h2>
+        <h2>Hubungi Kami</h2>
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
+            <input type="text" placeholder="Nama Anda" required>
+            <input type="email" placeholder="Email Anda" required>
+            <textarea rows="5" placeholder="Ceritakan kebutuhan Anda" required></textarea>
+            <button type="submit">Kirim Pesan</button>
         </form>
     </div>
 </section>
