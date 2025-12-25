@@ -7,60 +7,51 @@
 
     <style>
         :root {
-            --primary: #2ED8C3;      /* warna logo utama */
-            --primary-dark: #1FB9A6; /* hover / accent */
-            --dark-bg: #0F172A;      /* background utama */
-            --dark-section: #111827;/* section */
-            --card-bg: #1F2933;      /* card */
-            --text-light: #E5E7EB;
-            --text-muted: #9CA3AF;
+            --primary: #f5c26b;
+            --primary-hover: #e0a93c;
+            --dark: #0f0f0f;
+            --dark-soft: #1b1b1b;
+            --text-light: #ffffff;
+            --text-muted: #bbbbbb;
         }
 
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--dark-bg);
+            background-color: var(--dark);
             color: var(--text-light);
             line-height: 1.6;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 20px;
         }
 
         header {
-            background: radial-gradient(circle at top, rgba(46,216,195,0.25), transparent 60%),
-                        linear-gradient(135deg, #0F172A, #020617);
-            padding: 80px 0 100px;
+            background: radial-gradient(circle at top, #2a2a2a, #0f0f0f);
+            padding: 90px 0 110px;
             text-align: center;
         }
 
         /* LOGO */
         .logo img {
             width: 150px;
-            height: auto;
-            margin-bottom: 25px;
-            filter: drop-shadow(0 0 18px rgba(46,216,195,0.6));
-            transition: transform 0.3s ease;
-        }
-
-        .logo img:hover {
-            transform: scale(1.06);
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 14px rgba(245, 194, 107, 0.5));
         }
 
         h1 {
             font-size: 3rem;
-            margin-bottom: 20px;
             color: var(--primary);
+            margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
+            font-size: 1.15rem;
             color: var(--text-muted);
+            margin-bottom: 40px;
         }
 
         .cta-buttons {
@@ -71,128 +62,123 @@
 
         .btn {
             padding: 15px 34px;
-            border-radius: 8px;
+            border-radius: 6px;
             font-size: 1rem;
-            cursor: pointer;
             text-decoration: none;
+            font-weight: bold;
             transition: all 0.3s ease;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #022c2a;
-            box-shadow: 0 10px 30px rgba(46,216,195,0.35);
+            background: var(--primary);
+            color: #000;
         }
 
         .btn-primary:hover {
+            background: var(--primary-hover);
             transform: translateY(-2px);
-            box-shadow: 0 14px 40px rgba(46,216,195,0.55);
         }
 
         .btn-secondary {
-            background-color: transparent;
-            color: var(--primary);
             border: 2px solid var(--primary);
+            color: var(--primary);
         }
 
         .btn-secondary:hover {
-            background-color: var(--primary);
-            color: #022c2a;
+            background: var(--primary);
+            color: #000;
         }
 
-        .features {
+        /* PRODUK */
+        .products {
             padding: 90px 0;
-            background-color: var(--dark-section);
+            background-color: var(--dark-soft);
         }
 
-        .features h2 {
+        .products h2 {
             text-align: center;
+            color: var(--primary);
             font-size: 2.6rem;
             margin-bottom: 60px;
-            color: var(--primary);
         }
 
-        .feature-cards {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
         }
 
-        .card {
-            background-color: var(--card-bg);
+        .product-card {
+            background: #111;
+            padding: 35px 25px;
             border-radius: 14px;
-            padding: 35px;
-            margin: 20px;
-            width: 260px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(245,194,107,0.15);
+            transition: all 0.3s ease;
         }
 
-        .card:hover {
+        .product-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 18px 60px rgba(46,216,195,0.25);
+            border-color: var(--primary);
+            box-shadow: 0 12px 30px rgba(245,194,107,0.15);
         }
 
-        .card h3 {
+        .product-card h3 {
             color: var(--primary);
             margin-bottom: 15px;
+            font-size: 1.3rem;
         }
 
+        .product-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* CONTACT */
         .contact {
             padding: 90px 0;
-            background-color: var(--dark-bg);
         }
 
         .contact h2 {
             text-align: center;
+            color: var(--primary);
             font-size: 2.6rem;
             margin-bottom: 50px;
-            color: var(--primary);
         }
 
         form {
             max-width: 600px;
-            margin: 0 auto;
+            margin: auto;
         }
 
         input, textarea {
             width: 100%;
-            padding: 15px;
+            padding: 16px;
             margin-bottom: 20px;
-            border: 1px solid var(--primary);
-            border-radius: 8px;
-            background-color: #020617;
-            color: var(--text-light);
-            font-size: 1rem;
+            border-radius: 6px;
+            border: 1px solid rgba(245,194,107,0.4);
+            background: #111;
+            color: #fff;
         }
 
-        input::placeholder,
-        textarea::placeholder {
-            color: var(--text-muted);
-        }
-
-        button[type="submit"] {
+        button {
             width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: #022c2a;
+            padding: 16px;
+            background: var(--primary);
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
+            font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(46,216,195,0.4);
         }
 
-        button[type="submit"]:hover {
-            box-shadow: 0 14px 40px rgba(46,216,195,0.6);
+        button:hover {
+            background: var(--primary-hover);
         }
 
         footer {
             text-align: center;
             padding: 25px;
-            background-color: #020617;
-            color: var(--text-muted);
+            background: #080808;
+            color: #777;
         }
     </style>
 </head>
@@ -206,35 +192,40 @@
         </div>
 
         <h1>Elevate Your Brand with Exmind Digital</h1>
-        <p>Grow your brand through content, social media, technology, and digital performance strategies.</p>
+        <p>Creative, Technology & Performance-Driven Digital Agency</p>
 
         <div class="cta-buttons">
-            <a href="#features" class="btn btn-primary">View Our Services</a>
-            <a href="#contact" class="btn btn-secondary">Start a Project</a>
+            <a href="#products" class="btn btn-primary">Our Products</a>
+            <a href="#contact" class="btn btn-secondary">Start Project</a>
         </div>
     </div>
 </header>
 
-<section id="features" class="features">
+<section id="products" class="products">
     <div class="container">
-        <h2>Our Expertise</h2>
-        <div class="feature-cards">
-            <div class="card">
-                <h3>Content</h3>
-                <p>Create compelling content that captivates audiences and drives conversions.</p>
+        <h2>Produk Kami</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <h3>Sosmed & E-commerce Management</h3>
+                <p>Kelola sosial media dan toko online secara profesional untuk meningkatkan engagement dan penjualan.</p>
             </div>
-            <div class="card">
-                <h3>Social Media</h3>
-                <p>Strategize and manage social media campaigns for maximum impact and growth.</p>
+
+            <div class="product-card">
+                <h3>Website & Aplikasi Developer</h3>
+                <p>Pembuatan website dan aplikasi modern, cepat, responsif, dan scalable.</p>
             </div>
-            <div class="card">
-                <h3>Technology</h3>
-                <p>Leverage cutting-edge tech to optimize your digital presence and operations.</p>
+
+            <div class="product-card">
+                <h3>Digital Ads</h3>
+                <p>Strategi iklan digital berbasis data untuk hasil yang terukur dan optimal.</p>
             </div>
-            <div class="card">
-                <h3>Digital Performance</h3>
-                <p>Analyze and enhance performance metrics to achieve measurable results.</p>
+
+            <div class="product-card">
+                <h3>Live Streaming & Multimedia</h3>
+                <p>Produksi live streaming, video, dan konten multimedia berkualitas tinggi.</p>
             </div>
+
         </div>
     </div>
 </section>
