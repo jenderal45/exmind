@@ -4,227 +4,197 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Exmind Digital | Enterprise Digital Agency</title>
-<meta name="description" content="Exmind Digital adalah digital agency profesional untuk website, branding, digital marketing, ads, dan solusi teknologi berbasis data.">
-<meta name="keywords" content="digital agency, website developer, digital marketing, branding, SEO, ads, startup, corporate">
+<title>Exmind Digital — Enterprise Digital Agency</title>
+
+<meta name="description" content="Exmind Digital adalah digital agency profesional untuk website, branding, digital ads, social media, dan automation. Solusi digital untuk startup & corporate.">
+<meta name="keywords" content="Digital Agency, Website Developer, Branding, Digital Ads, SEO, Social Media">
 <meta name="author" content="Exmind Digital">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Exmind Digital | Enterprise Digital Agency">
-<meta property="og:description" content="Transforming brands through strategy, technology, and digital performance.">
-<meta property="og:type" content="website">
-
 <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'GA_MEASUREMENT_ID');
+gtag('config', 'G-XXXXXXXXXX');
 </script>
 
 <style>
 :root{
---bg-main:#0e1116;
---bg-secondary:#151a21;
---bg-card:#1c222c;
---primary:#03dac6;
---primary-soft:#1fe4d0;
---text-main:#ffffff;
---text-muted:#9aa4b2;
---accent:#2dd4bf;
---radius:14px;
---font-main:'Inter',system-ui,-apple-system,sans-serif;
+--bg:#0f1115;
+--bg-soft:#161a22;
+--card:#1c2230;
+--primary:#c9b26d;
+--accent:#00e0c6;
+--text:#ffffff;
+--muted:#9aa4b2;
 }
 
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box}
 body{
-font-family:var(--font-main);
-background:var(--bg-main);
-color:var(--text-main);
-line-height:1.6;
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:var(--bg);
+color:var(--text);
+line-height:1.7;
 }
 
-/* ===== NAVBAR ===== */
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:rgba(14,17,22,.9);
-backdrop-filter:blur(12px);
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,.05);
-}
-.nav-container{
+a{text-decoration:none;color:inherit}
+
+.container{
 max-width:1200px;
 margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:16px 20px;
+padding:0 20px;
 }
-.nav-logo img{height:38px}
-.nav-menu{
+
+/* NAVBAR */
+nav{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(15,17,21,.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #1f2430;
+}
+.nav-wrap{
 display:flex;
-gap:28px;
+align-items:center;
+justify-content:space-between;
+padding:14px 0;
+}
+.nav-logo img{
+width:200px;
+filter:drop-shadow(0 0 18px rgba(201,178,109,.6));
 }
 .nav-menu a{
-color:var(--text-muted);
-text-decoration:none;
-font-size:14px;
+margin-left:28px;
 font-weight:500;
+color:var(--muted);
 }
 .nav-menu a:hover{color:var(--primary)}
 
-/* ===== HERO ===== */
+/* HERO */
 header{
-padding:160px 20px 120px;
-background:
-radial-gradient(circle at top,rgba(3,218,198,.12),transparent 60%),
-linear-gradient(180deg,#0e1116,#0b0f14);
+padding:120px 0 90px;
 text-align:center;
+background:radial-gradient(circle at top,#1d2333,#0f1115 70%);
+}
+header img{
+width:260px;
+margin-bottom:30px;
+filter:drop-shadow(0 0 25px rgba(201,178,109,.7));
 }
 header h1{
 font-size:3.2rem;
-line-height:1.2;
 margin-bottom:20px;
 }
-header h1 span{color:var(--primary)}
 header p{
 max-width:720px;
-margin:0 auto 40px;
-color:var(--text-muted);
-font-size:1.15rem;
+margin:auto;
+font-size:1.2rem;
+color:var(--muted);
 }
-.cta{
+.hero-cta{
+margin-top:40px;
 display:flex;
 justify-content:center;
-gap:18px;
+gap:20px;
 flex-wrap:wrap;
 }
 .btn{
-padding:14px 28px;
-border-radius:999px;
+padding:16px 36px;
+border-radius:8px;
 font-weight:600;
-text-decoration:none;
-font-size:15px;
 transition:.3s;
 }
 .btn-primary{
 background:var(--primary);
-color:#0e1116;
+color:#111;
 }
-.btn-primary:hover{background:var(--primary-soft)}
+.btn-primary:hover{opacity:.9}
 .btn-outline{
-border:1px solid var(--primary);
+border:2px solid var(--primary);
 color:var(--primary);
 }
 .btn-outline:hover{
 background:var(--primary);
-color:#0e1116;
+color:#111;
 }
 
-/* ===== SECTION ===== */
-section{
-padding:100px 20px;
-}
-.container{
-max-width:1200px;
-margin:auto;
-}
+/* SECTION */
+section{padding:90px 0}
 .section-title{
 text-align:center;
 margin-bottom:60px;
 }
 .section-title h2{
-font-size:2.4rem;
-margin-bottom:10px;
+font-size:2.6rem;
+margin-bottom:12px;
 }
 .section-title p{
-color:var(--text-muted);
+color:var(--muted);
 }
 
-/* ===== SERVICES ===== */
-.services{
+/* SERVICES */
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:24px;
+gap:26px;
 }
-.service-card{
-background:var(--bg-card);
-padding:32px;
-border-radius:var(--radius);
-border:1px solid rgba(255,255,255,.05);
+.card{
+background:var(--card);
+border-radius:14px;
+padding:30px;
 transition:.3s;
 }
-.service-card:hover{
-transform:translateY(-6px);
-border-color:var(--primary);
-}
-.service-card h3{
-margin-bottom:12px;
-color:var(--primary);
-}
+.card:hover{transform:translateY(-6px)}
+.card h3{color:var(--primary)}
+.card p{color:var(--muted)}
 
-/* ===== PORTFOLIO ===== */
-.projects{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:24px;
-}
-.project{
-background:var(--bg-card);
-border-radius:var(--radius);
-padding:28px;
-border:1px solid rgba(255,255,255,.05);
-}
-.project h4{margin-bottom:10px}
+/* PROJECTS */
 .project a{
-color:var(--primary);
-text-decoration:none;
-font-size:14px;
+display:block;
+padding:24px;
+background:linear-gradient(135deg,#1f2635,#151924);
+border-radius:14px;
+}
+.project span{
+color:var(--accent);
+font-weight:600;
 }
 
-/* ===== FUNNEL ===== */
-.funnel{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:24px;
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#c9b26d,#8f7b3a);
+color:#111;
+padding:80px 20px;
+border-radius:20px;
 text-align:center;
 }
-.step{
-background:var(--bg-card);
-padding:28px;
-border-radius:var(--radius);
-}
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer{
-padding:40px 20px;
-background:#0b0f14;
+padding:40px 0;
 text-align:center;
-color:var(--text-muted);
-font-size:14px;
+color:var(--muted);
 }
 
-/* ===== WHATSAPP ===== */
+/* WHATSAPP */
 .wa{
 position:fixed;
-bottom:24px;
-right:24px;
+bottom:22px;
+right:22px;
 background:#25D366;
 color:#fff;
-padding:14px 18px;
-border-radius:999px;
-text-decoration:none;
+padding:16px 20px;
+border-radius:50px;
 font-weight:600;
-box-shadow:0 10px 30px rgba(37,211,102,.4);
-z-index:1000;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE */
 @media(max-width:768px){
-header h1{font-size:2.4rem}
+header h1{font-size:2.3rem}
 .nav-menu{display:none}
 }
 </style>
@@ -233,25 +203,27 @@ header h1{font-size:2.4rem}
 <body>
 
 <nav>
-<div class="nav-container">
+<div class="container nav-wrap">
 <div class="nav-logo">
 <img src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png">
 </div>
 <div class="nav-menu">
 <a href="#services">Services</a>
 <a href="#projects">Projects</a>
-<a href="#process">Process</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
 </nav>
 
 <header>
-<h1>Build, Scale & Win<br><span>With Exmind Digital</span></h1>
-<p>Enterprise-grade digital agency helping brands, startups, and corporations grow through strategy, technology, and performance marketing.</p>
-<div class="cta">
-<a href="#contact" class="btn btn-primary">Start Your Project</a>
-<a href="#projects" class="btn btn-outline">View Portfolio</a>
+<div class="container">
+<img src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png">
+<h1>Enterprise Digital Agency<br>for Growth-Driven Brands</h1>
+<p>Kami membantu startup, UMKM, dan corporate membangun sistem digital, branding kuat, dan performa pemasaran berbasis data.</p>
+<div class="hero-cta">
+<a href="#contact" class="btn btn-primary">Start Project</a>
+<a href="#services" class="btn btn-outline">Explore Services</a>
+</div>
 </div>
 </header>
 
@@ -259,16 +231,16 @@ header h1{font-size:2.4rem}
 <div class="container">
 <div class="section-title">
 <h2>Digital Agency Services</h2>
-<p>Pure digital. No talent, no influencer, no artist agency.</p>
+<p>Solusi lengkap end-to-end untuk pertumbuhan bisnis</p>
 </div>
 
-<div class="services">
-<div class="service-card"><h3>Website & App Development</h3><p>Company profile, landing page, e-commerce, custom web & app.</p></div>
-<div class="service-card"><h3>Branding & Creative</h3><p>Brand identity, visual system, motion & creative assets.</p></div>
-<div class="service-card"><h3>Social Media Management</h3><p>Strategy, content, design, monitoring & reporting.</p></div>
-<div class="service-card"><h3>Digital Ads & Funnel</h3><p>Meta Ads, Google Ads, TikTok Ads & conversion funnel.</p></div>
-<div class="service-card"><h3>SEO & Optimization</h3><p>Technical SEO, content SEO & performance optimization.</p></div>
-<div class="service-card"><h3>Analytics & Automation</h3><p>GA, tracking, CRM, WhatsApp & email automation.</p></div>
+<div class="grid">
+<div class="card"><h3>Website & App Development</h3><p>Company profile, landing page, e-commerce, custom app.</p></div>
+<div class="card"><h3>Branding & Creative</h3><p>Logo, brand identity, visual & motion graphic.</p></div>
+<div class="card"><h3>Social Media Management</h3><p>Strategy, content, reporting non-talent.</p></div>
+<div class="card"><h3>Digital Advertising</h3><p>Meta Ads, Google Ads, funnel optimization.</p></div>
+<div class="card"><h3>SEO & Optimization</h3><p>On-page, technical, local SEO.</p></div>
+<div class="card"><h3>Automation & Analytics</h3><p>CRM, WhatsApp automation, GA4.</p></div>
 </div>
 </div>
 </section>
@@ -277,47 +249,32 @@ header h1{font-size:2.4rem}
 <div class="container">
 <div class="section-title">
 <h2>Selected Projects</h2>
-<p>Live products & platforms built by Exmind ecosystem.</p>
+<p>Produk & platform yang telah kami bangun</p>
 </div>
 
-<div class="projects">
-<div class="project"><h4>Commenta</h4><a href="https://commenta-nine.vercel.app/" target="_blank">Visit Project →</a></div>
-<div class="project"><h4>Undanganmu</h4><a href="https://undanganmu-nine.vercel.app/" target="_blank">Visit Project →</a></div>
-<div class="project"><h4>Scorpio AI</h4><a href="https://scorpio-ai.vercel.app/" target="_blank">Visit Project →</a></div>
-<div class="project"><h4>Lumen</h4><a href="https://lumen-ochre.vercel.app/" target="_blank">Visit Project →</a></div>
-<div class="project"><h4>Creavo</h4><a href="https://creavo-orcin.vercel.app/" target="_blank">Visit Project →</a></div>
-<div class="project"><h4>Scorpio Code</h4><a href="https://scorpio-code.vercel.app/" target="_blank">Visit Project →</a></div>
+<div class="grid project">
+<a href="https://commenta-nine.vercel.app/" target="_blank"><span>Commenta</span><p>Comment Automation Platform</p></a>
+<a href="https://undanganmu-nine.vercel.app/" target="_blank"><span>Undanganmu</span><p>Digital Invitation Platform</p></a>
+<a href="https://scorpio-ai.vercel.app/" target="_blank"><span>Scorpio AI</span><p>Generative AI Platform</p></a>
+<a href="https://lumen-ochre.vercel.app/" target="_blank"><span>Lumen</span><p>Streaming & Social Media</p></a>
+<a href="https://creavo-orcin.vercel.app/" target="_blank"><span>Creavo</span><p>Design & Video Editor</p></a>
+<a href="https://scorpio-code.vercel.app/" target="_blank"><span>Scorpio Code</span><p>Code, Repo & Deploy Platform</p></a>
 </div>
 </div>
 </section>
 
-<section id="process">
-<div class="container">
-<div class="section-title">
-<h2>How We Work</h2>
-<p>High-conversion funnel process</p>
-</div>
-<div class="funnel">
-<div class="step">Discovery & Strategy</div>
-<div class="step">Design & Development</div>
-<div class="step">Launch & Optimization</div>
-<div class="step">Scale & Automation</div>
-</div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container section-title">
-<h2>Start Your Digital Growth</h2>
-<p>Let’s build something impactful together.</p>
-</div>
+<section class="cta" id="contact">
+<h2>Scale Your Business with Exmind Digital</h2>
+<p>Diskusikan kebutuhan digital perusahaan Anda sekarang</p>
+<br>
+<a href="https://wa.me/628XXXXXXXXXX" class="btn btn-primary">Chat WhatsApp</a>
 </section>
 
 <footer>
-© 2025 Exmind Digital. Enterprise Digital Agency.
+<p>© 2025 Exmind Digital — Enterprise Digital Agency</p>
 </footer>
 
-<a class="wa" href="https://wa.me/6289652435067" target="_blank">WhatsApp Us</a>
+<a href="https://wa.me/6289652435067" class="wa">WhatsApp</a>
 
 </body>
 </html>
