@@ -9,14 +9,14 @@
   <meta name="keywords" content="digital agency, jasa website, jasa aplikasi, social media management, digital ads, google ads, meta ads, landing page, exmind digital" />
   <meta name="author" content="Exmind Digital" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://example.com/" />
+  <link rel="canonical" href="https://exmind.co.id/" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Exmind Digital — Digital Agency Corporate & Startup" />
   <meta property="og:description" content="Website & Apps, Social Media & E-commerce Management, Digital Ads, Live Streaming & Multimedia. Premium, fast, conversion-focused." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" />
-  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:url" content="https://exmind.co.id/" />
 
   <!-- Favicon -->
   <link rel="icon" href="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" />
@@ -199,39 +199,77 @@
       color: var(--text);
     }
 
-    /* MOBILE NAV */
-    .burger{
-      display:none;
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      cursor:pointer;
-    }
-    .burger span{
-      display:block;
-      width: 18px;
-      height: 2px;
-      background: rgba(234,240,255,.8);
-      margin: 6px auto;
-      border-radius: 2px;
-    }
+    /* ============================= */
+    /* HEADER MOBILE REFINEMENT */
+    /* ============================= */
+    @media (max-width: 980px){
+
+      .nav-inner{
+        padding: 12px 0;
+      }
+
+      .brand{
+        gap: 8px;
+      }
+
+      .brand img{
+        width: 42px;
+      }
+
+      .brand .name strong{
+        font-size: 12px;
+      }
+
+      .brand .name span{
+        display:none; /* supaya tidak terlalu padat */
+      }
+
+      .nav-cta{
+        gap: 8px;
+      }
+
+      .pill{
+        padding: 8px 10px;
+        font-size: 11px;
+      }
+
+      .btn-primary{
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      .burger{
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+      }
+
+      .burger span{
+        width: 20px;
+      }
+
+    /* MOBILE PANEL STYLE */
     .mobile-panel{
-      display:none;
-      padding: 10px 0 18px;
-      border-top: 1px solid rgba(255,255,255,.08);
+      margin-top: 10px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(12px);
     }
+
     .mobile-panel a{
-      display:block;
-      padding: 12px 12px;
+      padding: 14px 14px;
+      font-size: 14px;
       border-radius: 12px;
-      color: var(--muted);
     }
-    .mobile-panel a:hover{
-      background: rgba(255,255,255,.05);
-      color: var(--text);
+
+    .mobile-panel a + a{
+      margin-top: 6px;
     }
+
+  }
+
 
     /* HERO */
     .hero{
@@ -641,6 +679,7 @@
       .wa-text{ display:none; }
       .logo-big img{ width: 240px; }
     }
+
   </style>
 </head>
 
@@ -914,76 +953,51 @@
 
       <div class="portfolio">
 
-        <!-- dari chat user -->
+      <!-- dari PDF -->
         <div class="card work">
-          <div class="tag">Web App</div>
-          <a href="https://commenta-nine.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Commenta</strong><br><span>commenta-nine.vercel.app</span></div>
+          <div class="tag">Organization</div>
+          <a href="https://hippijaktim.or.id/" target="_blank" rel="noopener">
+            <div><strong>Hippi Jakarta Timur</strong><br><span>hippijaktim.or.id</span></div>
+            <span>↗</span>
+          </a>
+        </div>
+        
+        <div class="card work">
+          <div class="tag">Service Forklift</div>
+          <a href="https://nkiglobalperkasa.co.id/" target="_blank" rel="noopener">
+            <div><strong>NKI Global Perkasa</strong><br><span>nkiglobalperkasa.co.id</span></div>
             <span>↗</span>
           </a>
         </div>
 
         <div class="card work">
-          <div class="tag">Landing Page</div>
-          <a href="https://undanganmu-nine.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>UndanganMu</strong><br><span>undanganmu-nine.vercel.app</span></div>
+          <div class="tag">IT & Automotive</div>
+          <a href="https://andalankreasiusaha.co.id/" target="_blank" rel="noopener">
+            <div><strong>Andalan Kreasi Usaha (AKU)</strong><br><span>andalankreasiusaha.co.id</span></div>
             <span>↗</span>
           </a>
         </div>
 
-        <div class="card work">
-          <div class="tag">AI Product</div>
-          <a href="https://scorpio-ai.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Scorpio AI</strong><br><span>scorpio-ai.vercel.app</span></div>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <div class="card work">
-          <div class="tag">Website</div>
-          <a href="https://lumen-ochre.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Lumen</strong><br><span>lumen-ochre.vercel.app</span></div>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <div class="card work">
-          <div class="tag">Creative</div>
-          <a href="https://creavo-orcin.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Creavo</strong><br><span>creavo-orcin.vercel.app</span></div>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <div class="card work">
-          <div class="tag">Dev Platform</div>
-          <a href="https://scorpio-code.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Scorpio Code</strong><br><span>scorpio-code.vercel.app</span></div>
-            <span>↗</span>
-          </a>
-        </div>
-
-        <!-- dari PDF -->
         <div class="card work">
           <div class="tag">Business</div>
-          <a href="https://oerusin.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Ourusin.id</strong><br><span>oerusin.vercel.app</span></div>
+          <a href="https://oerusin.id/" target="_blank" rel="noopener">
+            <div><strong>Oerusin</strong><br><span>oerusin.id</span></div>
             <span>↗</span>
           </a>
         </div>
 
         <div class="card work">
           <div class="tag">Healthcare</div>
-          <a href="https://azuridental.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Azuridental</strong><br><span>azuridental.vercel.app</span></div>
+          <a href="https://azuridental.com/" target="_blank" rel="noopener">
+            <div><strong>Azuri Dental</strong><br><span>azuridental.com</span></div>
             <span>↗</span>
           </a>
         </div>
 
         <div class="card work">
           <div class="tag">Law Firm</div>
-          <a href="https://rifkiauliyalawfirm.vercel.app/" target="_blank" rel="noopener">
-            <div><strong>Rifkia Auliya Law Firm</strong><br><span>rifkiauliyalawfirm.vercel.app</span></div>
+          <a href="https://rifkiauliyalawfirm.com/" target="_blank" rel="noopener">
+            <div><strong>Rifkia Auliya Law Firm</strong><br><span>rifkiauliyalawfirm.com</span></div>
             <span>↗</span>
           </a>
         </div>
@@ -1038,7 +1052,7 @@
             <ul class="list">
               <li>
                 <span class="check"><svg viewBox="0 0 24 24"><path d="M20.285 2.857 9 14.143 3.714 8.857 0 12.571 9 21.571 24 6.571z"/></svg></span>
-                <span><b>WhatsApp:</b> +62 896-5243-5067</span>
+                <span><b>WhatsApp:</b> +62 878-7510-1223</span>
               </li>
               <li>
                 <span class="check"><svg viewBox="0 0 24 24"><path d="M20.285 2.857 9 14.143 3.714 8.857 0 12.571 9 21.571 24 6.571z"/></svg></span>
@@ -1046,7 +1060,7 @@
               </li>
               <li>
                 <span class="check"><svg viewBox="0 0 24 24"><path d="M20.285 2.857 9 14.143 3.714 8.857 0 12.571 9 21.571 24 6.571z"/></svg></span>
-                <span><b>Website:</b> www.astria-group.com</span>
+                <span><b>Website:</b> www.exmind.co.id</span>
               </li>
             </ul>
 
@@ -1122,7 +1136,7 @@
     });
 
     // WhatsApp
-    const WA_NUMBER = "6289652435067";
+    const WA_NUMBER = "+6287875101223";
     const waFloat = document.getElementById("waFloat");
     waFloat.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Halo Exmind Digital, saya mau konsultasi untuk project.")}`;
 
