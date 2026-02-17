@@ -32,7 +32,6 @@
 
   <style>
     :root{
-      /* Brand-safe colors (tidak bentrok dengan logo) */
       --bg: #070A0F;
       --bg2: #0B1020;
       --card: rgba(255,255,255,.04);
@@ -42,7 +41,6 @@
       --muted2: rgba(234,240,255,.55);
       --border: rgba(255,255,255,.10);
 
-      /* Accent: soft teal-cyan (mirip vibe logo, tapi tidak kebanting) */
       --accent: #1FE6D6;
       --accent2: #9B7CFF;
       --good: #39ff88;
@@ -80,7 +78,9 @@
       padding: 0 var(--pad);
     }
 
-    /* NAVBAR */
+    /* ============================= */
+    /* NAVBAR (DESKTOP DEFAULT) */
+    /* ============================= */
     .nav{
       position: sticky;
       top:0;
@@ -89,6 +89,7 @@
       background: rgba(7,10,15,.62);
       border-bottom: 1px solid rgba(255,255,255,.08);
     }
+
     .nav-inner{
       display:flex;
       align-items:center;
@@ -96,14 +97,16 @@
       gap: 14px;
       padding: 14px 0;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap: 12px;
-      min-width: 210px;
+      min-width: 220px;
+      flex: 0 0 auto;
     }
     .brand img{
-      width: 54px;
+      width: 56px;
       height:auto;
       filter: drop-shadow(0 0 16px rgba(31,230,214,.35));
     }
@@ -124,16 +127,18 @@
     .nav-links{
       display:flex;
       align-items:center;
-      gap: 18px;
+      gap: 10px;
       flex-wrap:wrap;
       justify-content:center;
+      flex: 1 1 auto;
     }
     .nav-links a{
       font-size: 13px;
       color: var(--muted);
-      padding: 10px 10px;
+      padding: 10px 12px;
       border-radius: 10px;
       transition: .2s ease;
+      white-space: nowrap;
     }
     .nav-links a:hover{
       background: rgba(255,255,255,.06);
@@ -144,8 +149,8 @@
       display:flex;
       align-items:center;
       gap: 10px;
-      min-width: 240px;
       justify-content:flex-end;
+      flex: 0 0 auto;
     }
 
     .pill{
@@ -161,6 +166,7 @@
       transition: .2s ease;
       cursor:pointer;
       user-select:none;
+      white-space:nowrap;
     }
     .pill:hover{
       background: rgba(255,255,255,.06);
@@ -199,8 +205,35 @@
       color: var(--text);
     }
 
+    /* Burger hidden on desktop */
     .burger{
       display:none;
+      width:42px;
+      height:42px;
+      border-radius:12px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      gap:5px;
+      cursor:pointer;
+    }
+    .burger span{
+      width:20px;
+      height:2px;
+      background: var(--text);
+      display:block;
+      transition:.25s ease;
+    }
+    .burger.active span:nth-child(1){
+      transform: translateY(7px) rotate(45deg);
+    }
+    .burger.active span:nth-child(2){
+      opacity:0;
+    }
+    .burger.active span:nth-child(3){
+      transform: translateY(-7px) rotate(-45deg);
     }
 
     /* MOBILE PANEL */
@@ -214,7 +247,6 @@
       backdrop-filter: blur(14px);
       animation: fadeDown .25s ease;
     }
-    
     .mobile-panel a{
       display:block;
       padding:14px 14px;
@@ -223,165 +255,27 @@
       color: var(--muted);
       transition:.2s ease;
     }
-    
     .mobile-panel a:hover{
       background: rgba(255,255,255,.06);
       color: var(--text);
     }
-    
     .mobile-panel a + a{
       margin-top:6px;
     }
-    
     @keyframes fadeDown{
       from{opacity:0; transform:translateY(-8px);}
       to{opacity:1; transform:translateY(0);}
     }
 
     /* ============================= */
-    /* CLEAN MOBILE NAVBAR */
-    /* ============================= */
-    @media (max-width: 980px){
-
-    .nav-links{
-      display:none;
-    }
-
-    .nav-inner{
-      padding: 14px 16px;
-    }
-  
-    .brand img{
-      width:36px;
-    }
-  
-    .brand .name strong{
-      font-size:8px;
-    }
-  
-    .brand .name span{
-      display:none;
-    }
-  
-    .nav-cta{
-      gap:6px;
-    }
-  
-    .pill{
-      padding:8px 10px;
-      font-size:8px;
-    }
-  
-    .btn-primary{
-      padding:8px 12px;
-      font-size:8px;
-    }
-
-    .burger{
-      width:38px;
-      height:38px;
-      border-radius:10px;
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-    }
-  
-    .burger span{
-      width:18px;
-      height:2px;
-      background: var(--text);
-      display:block;
-      transition:.3s ease;
-    }
-  
-    .nav-inner{
-      padding: 14px 16px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-  
-    /* BRAND */
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-  
-    .brand img{
-      width:38px;
-      height:auto;
-    }
-  
-    .brand .name{
-      line-height:1.1;
-    }
-  
-    .brand .name strong{
-      font-size:13px;
-      letter-spacing:.5px;
-    }
-  
-    /* HILANGKAN SUB TEXT DI MOBILE */
-    .brand .name span{
-      display:none;
-    }
-  
-    /* CTA */
-    .nav-cta{
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-  
-    .btn-primary{
-      padding:8px 14px;
-      font-size:12px;
-      border-radius:14px;
-      white-space:nowrap;
-    }
-
-    /* BURGER */
-    .burger{
-      width:40px;
-      height:40px;
-      border-radius:12px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-
-    .burger span{
-      width:20px;
-      height:2px;
-    }
-
-    .burger{
-      display:flex;
-      flex-direction:column;
-      gap:5px;
-      }
-    
-    .burger.active span:nth-child(1){
-      transform: translateY(7px) rotate(45deg);
-    }
-    .burger.active span:nth-child(2){
-      opacity:0;
-    }
-    .burger.active span:nth-child(3){
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-  
     /* HERO */
+    /* ============================= */
     .hero{
-      padding: 58px 0 28px;
-    }
-    .hero-grid{
-      grid-template-columns: 1fr;
+      padding: 78px 0 40px;
     }
     .hero-grid{
       display:grid;
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.15fr .85fr;
       gap: 28px;
       align-items:center;
     }
@@ -409,7 +303,7 @@
 
     h1{
       margin:0 0 14px;
-      font-size: 44px;
+      font-size: 52px;
       line-height: 1.06;
       letter-spacing: -0.8px;
     }
@@ -417,7 +311,7 @@
       margin:0 0 22px;
       color: var(--muted);
       font-size: 16px;
-      max-width: 58ch;
+      max-width: 60ch;
     }
 
     .hero-actions{
@@ -473,7 +367,7 @@
       margin-bottom: 12px;
     }
     .logo-big img{
-      width: 260px;
+      width: 300px;
       max-width: 92%;
       height:auto;
       filter:
@@ -512,7 +406,9 @@
       text-align:center;
     }
 
-    /* SECTION */
+    /* ============================= */
+    /* SECTIONS */
+    /* ============================= */
     section{
       padding: 64px 0;
     }
@@ -762,31 +658,69 @@
     .wa-text strong{ font-size: 13px; }
     .wa-text span{ font-size: 12px; color: var(--muted2); }
 
+    /* ============================= */
     /* RESPONSIVE */
+    /* ============================= */
     @media (max-width: 980px){
+      .nav-inner{
+        padding: 12px 0;
+      }
+
+      .nav-links{ display:none; }
+      .burger{ display:flex; }
+
+      .brand{
+        min-width: auto;
+      }
+      .brand img{
+        width: 42px;
+      }
+      .brand .name strong{
+        font-size: 13px;
+      }
+      .brand .name span{
+        display:none;
+      }
+
+      .pill{
+        padding: 8px 10px;
+        font-size: 12px;
+      }
+      .btn-primary{
+        padding: 9px 12px;
+        font-size: 12px;
+        border-radius: 14px;
+      }
+
+      .hero{
+        padding: 58px 0 28px;
+      }
+      .hero-grid{
+        grid-template-columns: 1fr;
+      }
+
+      h1{ font-size: 38px; }
+
       .grid-4{ grid-template-columns: repeat(2, 1fr); }
       .grid-3{ grid-template-columns: repeat(2, 1fr); }
       .portfolio{ grid-template-columns: repeat(2, 1fr); }
       .contact-grid{ grid-template-columns: 1fr; }
-      .nav-cta{ min-width: auto; }
-      .brand{ min-width: auto; }
-      h1{ font-size: 38px; }
     }
+
     @media (max-width: 560px){
-      h1{ font-size: 34px; }
+      h1{ font-size: 32px; }
       .grid-4, .grid-3, .grid-2{ grid-template-columns: 1fr; }
       .portfolio{ grid-template-columns: 1fr; }
       .form .row{ grid-template-columns: 1fr; }
       .wa-text{ display:none; }
-      .logo-big img{ width: 240px; }
+      .logo-big img{ width: 250px; }
+      .btn-primary{ width: 100%; }
+      .pill{ display:none; } /* biar mobile lebih clean */
     }
 
     @media (min-width: 1200px){
-      h1{ font-size: 52px; }
-      .hero{ padding: 80px 0 40px; }
       .container{ max-width: 1400px; }
     }
-
   </style>
 </head>
 
@@ -896,7 +830,7 @@
     </div>
   </header>
 
-  <!-- SERVICES (Produk + foto open-source) -->
+  <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <div class="section-head">
@@ -944,7 +878,7 @@
     </div>
   </section>
 
-  <!-- SOLUTIONS (Digital Agency Services yang kamu kirim) -->
+  <!-- SOLUTIONS -->
   <section id="solutions">
     <div class="container">
       <div class="section-head">
@@ -1059,8 +993,6 @@
       </div>
 
       <div class="portfolio">
-
-      <!-- dari PDF -->
         <div class="card work">
           <div class="tag">Organization</div>
           <a href="https://hippijaktim.or.id/" target="_blank" rel="noopener">
@@ -1068,7 +1000,7 @@
             <span>↗</span>
           </a>
         </div>
-        
+
         <div class="card work">
           <div class="tag">Service Forklift</div>
           <a href="https://nkiglobalperkasa.co.id/" target="_blank" rel="noopener">
@@ -1108,7 +1040,6 @@
             <span>↗</span>
           </a>
         </div>
-
       </div>
     </div>
   </section>
@@ -1229,21 +1160,8 @@
     // YEAR
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile menu
-    const burger = document.getElementById("burger");
-    const mobilePanel = document.getElementById("mobilePanel");
-    burger.addEventListener("click", () => {
-      const open = mobilePanel.style.display === "block";
-      mobilePanel.style.display = open ? "none" : "block";
-    });
-
-    // Smooth close mobile on click
-    [...mobilePanel.querySelectorAll("a")].forEach(a => {
-      a.addEventListener("click", () => mobilePanel.style.display = "none");
-    });
-
     // WhatsApp
-    const WA_NUMBER = "+6287875101233";
+    const WA_NUMBER = "6287875101233";
     const waFloat = document.getElementById("waFloat");
     waFloat.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Halo Exmind Digital, saya mau konsultasi untuk project.")}`;
 
@@ -1279,6 +1197,23 @@ Mohon info estimasi & timeline. Terima kasih.`;
       window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
       return false;
     }
+
+    // MOBILE MENU (SINGLE, NO DUPLICATE)
+    const burger = document.getElementById("burger");
+    const mobilePanel = document.getElementById("mobilePanel");
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      const open = mobilePanel.style.display === "block";
+      mobilePanel.style.display = open ? "none" : "block";
+    });
+
+    [...mobilePanel.querySelectorAll("a")].forEach(a => {
+      a.addEventListener("click", () => {
+        mobilePanel.style.display = "none";
+        burger.classList.remove("active");
+      });
+    });
 
     // MULTI LANGUAGE
     let LANG = "id";
@@ -1456,14 +1391,14 @@ Mohon info estimasi & timeline. Terima kasih.`;
     function applyLang(lang){
       LANG = lang;
       document.documentElement.lang = lang === "id" ? "id" : "en";
-      document.getElementById("langLabel").textContent = lang.toUpperCase();
+      const label = document.getElementById("langLabel");
+      if(label) label.textContent = lang.toUpperCase();
 
       document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
         if(dict[lang][key]) el.textContent = dict[lang][key];
       });
 
-      // Placeholder switch (simple)
       if(lang === "en"){
         document.getElementById("qName").placeholder = "Name";
         document.getElementById("qNeed").placeholder = "Need (Website / Ads / Social Media)";
@@ -1484,27 +1419,13 @@ Mohon info estimasi & timeline. Terima kasih.`;
     }
 
     const langBtn = document.getElementById("langBtn");
-    langBtn.addEventListener("click", () => {
-      applyLang(LANG === "id" ? "en" : "id");
-    });
+    if(langBtn){
+      langBtn.addEventListener("click", () => {
+        applyLang(LANG === "id" ? "en" : "id");
+      });
+    }
 
-    // default
     applyLang("id");
-  </script>
-
-  <script>
-    const burger = document.getElementById("burger");
-    const panel = document.getElementById("mobilePanel");
-    
-    burger.addEventListener("click", ()=>{
-      burger.classList.toggle("active");
-    
-      if(panel.style.display === "block"){
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
   </script>
 </body>
 </html>
