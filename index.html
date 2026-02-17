@@ -764,13 +764,10 @@
 
     /* RESPONSIVE */
     @media (max-width: 980px){
-      .hero-grid{ grid-template-columns: 1fr; }
       .grid-4{ grid-template-columns: repeat(2, 1fr); }
       .grid-3{ grid-template-columns: repeat(2, 1fr); }
       .portfolio{ grid-template-columns: repeat(2, 1fr); }
       .contact-grid{ grid-template-columns: 1fr; }
-      .nav-links{ display:none; }
-      .burger{ display:block; }
       .nav-cta{ min-width: auto; }
       .brand{ min-width: auto; }
       h1{ font-size: 38px; }
@@ -782,6 +779,12 @@
       .form .row{ grid-template-columns: 1fr; }
       .wa-text{ display:none; }
       .logo-big img{ width: 240px; }
+    }
+
+    @media (min-width: 1200px){
+      h1{ font-size: 52px; }
+      .hero{ padding: 80px 0 40px; }
+      .container{ max-width: 1400px; }
     }
 
   </style>
