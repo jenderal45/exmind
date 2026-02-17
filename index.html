@@ -200,75 +200,73 @@
     }
 
     /* ============================= */
-    /* HEADER MOBILE REFINEMENT */
-    /* ============================= */
-    @media (max-width: 980px){
+/* CLEAN MOBILE NAVBAR */
+/* ============================= */
+@media (max-width: 980px){
 
-      .nav-inner{
-        padding: 12px 0;
-      }
-
-      .brand{
-        gap: 8px;
-      }
-
-      .brand img{
-        width: 42px;
-      }
-
-      .brand .name strong{
-        font-size: 12px;
-      }
-
-      .brand .name span{
-        display:none; /* supaya tidak terlalu padat */
-      }
-
-      .nav-cta{
-        gap: 8px;
-      }
-
-      .pill{
-        padding: 8px 10px;
-        font-size: 11px;
-      }
-
-      .btn-primary{
-        padding: 10px 12px;
-        font-size: 12px;
-      }
-
-      .burger{
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-      }
-
-      .burger span{
-        width: 20px;
-      }
-
-    /* MOBILE PANEL STYLE */
-    .mobile-panel{
-      margin-top: 10px;
-      padding: 14px;
-      border-radius: 16px;
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(12px);
-    }
-
-    .mobile-panel a{
-      padding: 14px 14px;
-      font-size: 14px;
-      border-radius: 12px;
-    }
-
-    .mobile-panel a + a{
-      margin-top: 6px;
-    }
-
+  .nav-inner{
+    padding: 14px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
   }
+
+  /* BRAND */
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .brand img{
+    width:38px;
+    height:auto;
+  }
+
+  .brand .name{
+    line-height:1.1;
+  }
+
+  .brand .name strong{
+    font-size:13px;
+    letter-spacing:.5px;
+  }
+
+  /* HILANGKAN SUB TEXT DI MOBILE */
+  .brand .name span{
+    display:none;
+  }
+
+  /* CTA */
+  .nav-cta{
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+
+  .btn-primary{
+    padding:8px 14px;
+    font-size:12px;
+    border-radius:14px;
+    white-space:nowrap;
+  }
+
+    /* BURGER */
+    .burger{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .burger span{
+      width:20px;
+      height:2px;
+    }
+
+    }
 
 
     /* HERO */
