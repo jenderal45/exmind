@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exmind Digital — Premium Digital Agency</title>
+  <title>Exmind Digital - Premium Digital Agency</title>
 
   <!-- SEO BASIC -->
-  <meta name="description" content="Exmind Digital is a premium digital agency providing website development, branding, social media management, SEO, and digital advertising to scale your business." />
-  <meta name="keywords" content="Exmind Digital, digital agency, jasa website, jasa landing page, jasa social media, jasa branding, jasa SEO, jasa digital marketing, jasa iklan, jasa developer" />
+  <meta name="description" content="Exmind Digital is a premium digital agency providing website development, social media management, branding, SEO, and digital advertising to scale your business." />
+  <meta name="keywords" content="digital agency, jasa website, jasa landing page, jasa social media, jasa branding, jasa SEO, jasa digital marketing, Exmind Digital" />
   <meta name="author" content="Exmind Digital" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://exmind-digital.vercel.app/" />
 
   <!-- OPEN GRAPH -->
-  <meta property="og:title" content="Exmind Digital — Premium Digital Agency" />
+  <meta property="og:title" content="Exmind Digital - Premium Digital Agency" />
   <meta property="og:description" content="Website, branding, social media, SEO, and performance marketing. Scale your business with Exmind Digital." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://exmind-digital.vercel.app/" />
   <meta property="og:image" content="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" />
 
-  <!-- TWITTER -->
+  <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Exmind Digital — Premium Digital Agency" />
+  <meta name="twitter:title" content="Exmind Digital - Premium Digital Agency" />
   <meta name="twitter:description" content="Website, branding, social media, SEO, and performance marketing." />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" />
 
   <!-- FAVICON -->
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" />
 
-  <!-- SCHEMA -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,7 +47,7 @@
   }
   </script>
 
-  <!-- GOOGLE ANALYTICS (GANTI ID) -->
+  <!-- Google Analytics (GANTI G-XXXXXXXXXX) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -58,51 +58,45 @@
 
   <style>
     :root{
-      --bg: #070A10;
-      --bg2: #0B0F18;
-      --card: rgba(255,255,255,.05);
-      --border: rgba(255,255,255,.10);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-
-      /* Aman sama logo */
-      --brand: #00FFD6;
-      --brand2: #5EEAD4;
-
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
-      --radius: 18px;
+      --bg:#0b0c10;
+      --panel:#11131a;
+      --panel2:#151827;
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.75);
+      --border:rgba(255,255,255,.08);
+      --accent:#00ffd6;
+      --accent2:#7c5cff;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --radius:18px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue";
-      background:
-        radial-gradient(900px 500px at 15% 10%, rgba(0,255,214,.10), transparent 55%),
-        radial-gradient(900px 500px at 90% 25%, rgba(94,234,212,.08), transparent 55%),
-        linear-gradient(180deg, var(--bg), var(--bg2));
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
-      overflow-x:hidden;
     }
 
-    a{color:inherit}
-    img{max-width:100%; display:block}
-
-    .container{
-      width: min(1180px, calc(100% - 40px));
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 0 20px;
     }
 
-    /* NAVBAR */
+    /* =========================
+       NAVBAR (NEW - MOBILE FIX)
+    ========================== */
     .nav{
       position: sticky;
       top: 0;
       z-index: 9999;
-      background: rgba(7, 10, 16, 0.72);
+      background: rgba(8, 10, 16, 0.78);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav-inner{
@@ -119,6 +113,7 @@
       align-items:center;
       gap: 12px;
       text-decoration:none;
+      color: var(--text);
       min-width:0;
     }
 
@@ -126,16 +121,14 @@
       width: 56px;
       height: 56px;
       object-fit: contain;
-      filter: drop-shadow(0 0 14px rgba(0,255,214,.22));
+      filter: drop-shadow(0 0 18px rgba(0, 255, 214, 0.25));
     }
 
     .brand-text{
       font-weight: 800;
       letter-spacing: .2px;
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       white-space: nowrap;
-      overflow:hidden;
-      text-overflow: ellipsis;
     }
 
     .nav-links{
@@ -146,52 +139,25 @@
 
     .nav-links a{
       text-decoration:none;
-      color: rgba(255,255,255,.82);
+      color: rgba(234,240,255,.85);
       font-size: .95rem;
       transition: .2s ease;
-      padding: 8px 10px;
+      padding: 10px 10px;
       border-radius: 12px;
     }
 
     .nav-links a:hover{
-      color: var(--brand);
+      color: var(--accent);
       background: rgba(255,255,255,.04);
     }
 
     .nav-cta{
-      padding: 10px 14px !important;
-      border-radius: 14px !important;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color: #051014 !important;
+      padding: 11px 14px !important;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), #00c7ff);
+      color: #071012 !important;
       font-weight: 800;
-      box-shadow: 0 14px 35px rgba(0,255,214,.14);
-    }
-
-    .lang-pill{
-      display:flex;
-      gap: 8px;
-      padding: 6px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-    }
-
-    .lang-btn{
-      border: 0;
-      background: transparent;
-      color: rgba(255,255,255,.75);
-      font-weight: 700;
-      padding: 7px 10px;
-      border-radius: 999px;
-      cursor: pointer;
-      transition: .2s ease;
-      font-size: .9rem;
-    }
-
-    .lang-btn.active{
-      background: rgba(0,255,214,.16);
-      color: #E8FFFB;
-      border: 1px solid rgba(0,255,214,.28);
+      box-shadow: 0 14px 35px rgba(0,255,214,.12);
     }
 
     .nav-toggle{
@@ -202,916 +168,656 @@
       border-radius: 14px;
       padding: 10px 12px;
       font-size: 18px;
-      cursor:pointer;
+      cursor: pointer;
+      line-height: 1;
     }
 
-    /* HERO */
-    header{
-      padding: 70px 0 80px;
+    /* =========================
+       HERO (STRUCTURE SAME)
+    ========================== */
+    header {
+      background:
+        radial-gradient(900px 500px at 20% 20%, rgba(0,255,214,.12), transparent 60%),
+        radial-gradient(700px 500px at 80% 20%, rgba(124,92,255,.10), transparent 60%),
+        linear-gradient(135deg, #0c0f19, #0b0c10);
+      padding: 80px 0 100px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
     }
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.25fr .75fr;
-      gap: 34px;
-      align-items:center;
-      padding-top: 16px;
+    /* LOGO (BIGGER + CLEAR) */
+    .logo img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 0 24px rgba(0, 255, 214, 0.20));
     }
 
-    .hero-badge{
-      display:inline-flex;
-      gap: 10px;
-      align-items:center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.08);
-      color: rgba(255,255,255,.78);
-      font-size: .92rem;
+    h1 {
+      font-size: 3rem;
       margin-bottom: 16px;
-      width: fit-content;
+      color: var(--accent);
+      line-height: 1.1;
     }
 
-    .dot{
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: var(--brand);
-      box-shadow: 0 0 18px rgba(0,255,214,.45);
+    p {
+      font-size: 1.15rem;
+      margin-bottom: 34px;
+      color: var(--muted);
     }
 
-    h1{
-      font-size: 3.1rem;
-      line-height: 1.06;
-      margin: 0 0 16px;
-      letter-spacing: -0.5px;
-    }
-
-    .hero p{
-      margin: 0 0 22px;
-      font-size: 1.12rem;
-      color: rgba(255,255,255,.76);
-      max-width: 62ch;
-    }
-
-    .cta-row{
-      display:flex;
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
       gap: 14px;
-      align-items:center;
       flex-wrap: wrap;
-      margin-top: 12px;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap: 10px;
-      padding: 14px 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      text-decoration:none;
+    .btn {
+      padding: 14px 22px;
+      border: none;
+      border-radius: 14px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease, background-color 0.3s;
       font-weight: 800;
-      transition: .2s ease;
-      cursor:pointer;
-      user-select:none;
-    }
-
-    .btn-primary{
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      color: #061015;
-      border: 0;
-      box-shadow: 0 18px 45px rgba(0,255,214,.16);
-    }
-
-    .btn-primary:hover{transform: translateY(-1px)}
-    .btn-ghost{
-      background: rgba(255,255,255,.04);
-      color: rgba(255,255,255,.92);
-    }
-    .btn-ghost:hover{border-color: rgba(0,255,214,.25)}
-
-    .hero-side{
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-side .logo-big{
-      width: 100%;
-      height: 160px;
-      object-fit: contain;
-      margin: 6px auto 10px;
-      filter: drop-shadow(0 0 18px rgba(0,255,214,.20));
-    }
-
-    .mini-points{
-      display:grid;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       gap: 10px;
-      margin-top: 8px;
     }
 
-    .mini-point{
-      display:flex;
-      gap: 10px;
-      align-items:flex-start;
-      color: rgba(255,255,255,.78);
-      font-size: .98rem;
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #00c7ff);
+      color: #071012;
+      box-shadow: 0 18px 50px rgba(0,255,214,.12);
     }
 
-    .mini-point b{color:#fff}
+    .btn-primary:hover { transform: translateY(-2px); }
 
-    /* SECTIONS */
-    section{padding: 72px 0}
-    .section-head{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-    .section-head h2{
-      margin:0;
-      font-size: 2.1rem;
-      letter-spacing: -0.4px;
-    }
-    .section-head p{
-      margin:0;
-      color: rgba(255,255,255,.70);
-      max-width: 62ch;
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--accent);
+      border: 1px solid rgba(0,255,214,.35);
     }
 
-    /* SERVICES */
-    .grid{
-      display:grid;
+    .btn-secondary:hover {
+      background-color: rgba(0,255,214,.08);
+    }
+
+    /* =========================
+       SERVICES (KEEP SECTION ID)
+    ========================== */
+    .features {
+      padding: 80px 0;
+      background-color: #0c0f19;
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+
+    .subtitle{
+      text-align:center;
+      max-width: 860px;
+      margin: 0 auto 45px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .feature-cards {
+      display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
-    .card{
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 20px;
-      overflow:hidden;
-      box-shadow: 0 14px 45px rgba(0,0,0,.28);
-      transition: .2s ease;
-    }
-
-    .card:hover{
-      transform: translateY(-3px);
-      border-color: rgba(0,255,214,.22);
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      text-align: left;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 290px;
     }
 
     .card img{
       width:100%;
-      height: 160px;
+      height: 140px;
       object-fit: cover;
-      filter: saturate(1.1);
+      border-radius: 14px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255,255,255,.08);
     }
 
-    .card .pad{
-      padding: 16px 16px 18px;
-    }
-
-    .card h3{
-      margin: 0 0 8px;
+    .card h3 {
+      color: var(--accent);
+      margin-bottom: 8px;
       font-size: 1.1rem;
-      letter-spacing: -0.2px;
     }
 
     .card p{
       margin:0;
-      color: rgba(255,255,255,.72);
       font-size: .98rem;
+      color: rgba(234,240,255,.78);
     }
 
-    /* PORTFOLIO */
+    /* =========================
+       PORTFOLIO (NEW SECTION)
+    ========================== */
     .portfolio{
+      padding: 80px 0;
+      background: #0b0c10;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .portfolio h2{
+      text-align:center;
+      font-size: 2.4rem;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .portfolio-grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 16px;
+      margin-top: 40px;
     }
 
     .project{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 18px;
-      border-radius: 20px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      transition: .2s ease;
-      box-shadow: 0 14px 45px rgba(0,0,0,.26);
+      box-shadow: var(--shadow);
     }
 
-    .project:hover{
-      transform: translateY(-3px);
-      border-color: rgba(0,255,214,.22);
-    }
-
-    .project h4{
+    .project h3{
       margin: 0 0 8px;
-      font-size: 1.1rem;
+      color: var(--text);
+      font-size: 1.05rem;
     }
 
     .project p{
-      margin:0 0 14px;
-      color: rgba(255,255,255,.70);
+      margin: 0 0 12px;
+      color: rgba(234,240,255,.72);
       font-size: .95rem;
     }
 
     .project a{
       display:inline-flex;
-      gap: 8px;
       align-items:center;
+      gap: 8px;
       text-decoration:none;
+      color: var(--accent);
       font-weight: 800;
-      color: var(--brand);
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(0,255,214,.25);
+      background: rgba(0,255,214,.06);
     }
 
-    /* PRICING */
-    .pricing{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+    .project a:hover{
+      background: rgba(0,255,214,.10);
     }
 
-    .price{
+    /* =========================
+       CONTACT (STRUCTURE SAME)
+    ========================== */
+    .contact {
+      padding: 80px 0;
+      background-color: #0c0f19;
+    }
+
+    .contact h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+
+    form {
+      max-width: 650px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid var(--border);
       padding: 22px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 18px 55px rgba(0,0,0,.30);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
-    .price.featured{
-      border-color: rgba(0,255,214,.25);
-      box-shadow: 0 20px 65px rgba(0,255,214,.10);
-    }
-
-    .price h3{margin:0 0 10px}
-    .price .tag{
-      display:inline-flex;
-      padding: 7px 12px;
-      border-radius: 999px;
-      background: rgba(0,255,214,.14);
-      border: 1px solid rgba(0,255,214,.22);
-      font-weight: 800;
-      font-size: .92rem;
-      margin-bottom: 12px;
-    }
-
-    .price .num{
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      margin: 8px 0 4px;
-    }
-
-    .price ul{
-      margin: 14px 0 0;
-      padding: 0 0 0 18px;
-      color: rgba(255,255,255,.75);
-      display:grid;
-      gap: 10px;
-    }
-
-    /* CONTACT */
-    .contact-wrap{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    form{
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: 22px;
-      padding: 18px;
-      box-shadow: 0 18px 55px rgba(0,0,0,.28);
-    }
-
-    input, textarea{
-      width:100%;
-      padding: 14px 14px;
-      margin-bottom: 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(0,0,0,.25);
-      color: #fff;
-      outline:none;
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(0,255,214,.25);
+      border-radius: 14px;
+      background-color: rgba(0,0,0,.25);
+      color: var(--text);
       font-size: 1rem;
+      outline: none;
     }
 
-    textarea{min-height: 130px; resize: vertical}
-
-    input::placeholder, textarea::placeholder{
-      color: rgba(255,255,255,.45);
+    input::placeholder, textarea::placeholder {
+      color: rgba(234,240,255,.55);
     }
 
-    .contact-box{
+    button[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, var(--accent), #00c7ff);
+      color: #071012;
+      border: none;
+      border-radius: 14px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    button[type="submit"]:hover { opacity: .95; }
+
+    footer {
+      text-align: center;
       padding: 22px;
-      border-radius: 22px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 18px 55px rgba(0,0,0,.28);
+      background-color: #0b0c10;
+      color: rgba(234,240,255,.55);
+      border-top: 1px solid var(--border);
     }
 
-    .contact-box h3{margin:0 0 8px}
-    .contact-box p{margin:0 0 14px; color: rgba(255,255,255,.75)}
-
-    .contact-list{
-      display:grid;
-      gap: 10px;
-      margin-top: 12px;
-      color: rgba(255,255,255,.78);
-    }
-
-    footer{
-      padding: 26px 0;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: rgba(255,255,255,.60);
-      text-align:center;
-    }
-
-    /* WHATSAPP FLOAT */
+    /* =========================
+       WHATSAPP FLOATING BUTTON
+    ========================== */
     .wa-float{
       position: fixed;
       right: 18px;
       bottom: 18px;
       z-index: 99999;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
       display:flex;
-      gap: 10px;
       align-items:center;
-      padding: 12px 14px;
-      border-radius: 999px;
+      justify-content:center;
       text-decoration:none;
+      background: #25D366;
+      color: #06140f;
+      font-size: 24px;
       font-weight: 900;
-      background: linear-gradient(135deg, #25D366, #1DB954);
-      color: #061015;
-      box-shadow: 0 18px 55px rgba(0,0,0,.35);
-      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 20px 55px rgba(0,0,0,.35);
     }
 
-    .wa-float span{
-      color: #061015;
-      font-weight: 900;
-    }
+    .wa-float:hover{ transform: translateY(-2px); }
 
-    /* RESPONSIVE */
-    @media (max-width: 1050px){
-      .grid{grid-template-columns: repeat(2, 1fr)}
-      .portfolio{grid-template-columns: repeat(2, 1fr)}
-      .pricing{grid-template-columns: 1fr}
-      .hero{grid-template-columns: 1fr}
-      .hero-side .logo-big{height: 140px}
+    /* =========================
+       RESPONSIVE
+    ========================== */
+    @media (max-width: 1100px){
+      .feature-cards{ grid-template-columns: repeat(2, 1fr); }
+      .portfolio-grid{ grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 900px){
-      .nav-toggle{display:inline-flex}
+      /* NAV MOBILE */
+      .nav-toggle{ display:inline-flex; }
+
       .nav-links{
         position:absolute;
-        left:0;
-        right:0;
-        top: 78px;
+        left: 0;
+        right: 0;
+        top: 74px;
         display:none;
-        flex-direction:column;
-        align-items:stretch;
+        flex-direction: column;
+        align-items: stretch;
         gap: 0;
+        background: rgba(8, 10, 16, 0.96);
+        border-bottom: 1px solid var(--border);
         padding: 10px 14px 16px;
-        background: rgba(7, 10, 16, 0.96);
-        border-bottom: 1px solid rgba(255,255,255,.08);
       }
+
       .nav-links a{
         padding: 14px 12px;
-        border-radius: 14px;
         font-size: 1rem;
       }
-      .nav-links .nav-cta{
-        margin-top: 10px;
-        text-align:center;
-        padding: 14px !important;
+
+      .nav-links.show{ display:flex; }
+
+      /* HERO MOBILE */
+      header{ padding: 70px 0 70px; }
+      .logo img{ width: 175px; }
+      h1{ font-size: 2.05rem; }
+      p{ font-size: 1.05rem; margin-bottom: 24px; }
+
+      .cta-buttons{
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
       }
-      .nav-links.show{display:flex}
 
-      header{padding: 60px 0 60px}
-      h1{font-size: 2.1rem}
-      .cta-row{flex-direction: column; align-items: stretch}
-      .btn{width:100%}
-
-      .contact-wrap{grid-template-columns: 1fr}
+      .cta-buttons a{ width: 100%; }
     }
 
     @media (max-width: 520px){
-      .brand-text{display:none}
-      .brand-logo{width: 54px; height: 54px}
-      .grid{grid-template-columns: 1fr}
-      .portfolio{grid-template-columns: 1fr}
+      .brand-logo{ width: 48px; height: 48px; }
+      .brand-text{ font-size: .95rem; }
+      .feature-cards{ grid-template-columns: 1fr; }
+      .portfolio-grid{ grid-template-columns: 1fr; }
+      .logo img{ width: 160px; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <img class="brand-logo" src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital Logo">
-        <span class="brand-text">Exmind Digital</span>
-      </a>
+<!-- NAVBAR (ADDED, DOESN'T BREAK STRUCTURE) -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand">
+      <img class="brand-logo" src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital Logo" />
+      <span class="brand-text">Exmind Digital</span>
+    </a>
 
-      <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">☰</button>
 
-      <div class="nav-links">
-        <a href="#services" data-i18n="nav_services">Services</a>
-        <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
-        <a href="#pricing" data-i18n="nav_pricing">Packages</a>
-        <a href="#contact" data-i18n="nav_contact">Contact</a>
+    <div class="nav-links">
+      <a href="#features" data-i18n="nav_services">Services</a>
+      <a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <a href="#" class="lang-switch" data-lang="id">ID</a>
+      <a href="#" class="lang-switch" data-lang="en">EN</a>
+      <a class="nav-cta" href="#contact" data-i18n="nav_cta">Start Project</a>
+    </div>
+  </div>
+</nav>
 
-        <div class="lang-pill">
-          <button class="lang-btn active" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="id">ID</button>
-        </div>
+<header id="home">
+  <div class="container">
+    <div class="logo">
+      <img src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital Logo">
+    </div>
 
-        <a class="nav-cta" href="#contact" data-i18n="nav_cta">Start Project</a>
+    <h1 data-i18n="hero_title">Elevate Your Brand with Exmind Digital</h1>
+    <p data-i18n="hero_desc">Grow your brand through content, social media, technology, and performance-driven digital strategies.</p>
+
+    <div class="cta-buttons">
+      <a href="#features" class="btn btn-primary" data-i18n="hero_btn1">View Our Services</a>
+      <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn2">Start a Project</a>
+    </div>
+  </div>
+</header>
+
+<section id="features" class="features">
+  <div class="container">
+    <h2 data-i18n="services_title">Our Expertise</h2>
+    <p class="subtitle" data-i18n="services_subtitle">
+      Premium services built for startups, SMEs, and enterprise teams who want measurable growth.
+    </p>
+
+    <div class="feature-cards">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=60" alt="Website and App Development">
+        <h3 data-i18n="svc1_title">Website & App Development</h3>
+        <p data-i18n="svc1_desc">Landing page, company profile, e-commerce, and custom web apps with speed, security, and SEO-ready structure.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1400&q=60" alt="Branding and Creative Design">
+        <h3 data-i18n="svc2_title">Branding & Creative Design</h3>
+        <p data-i18n="svc2_desc">Logo, visual identity system, creative assets, motion graphics, and brand guidelines for premium positioning.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1400&q=60" alt="Social Media Management">
+        <h3 data-i18n="svc3_title">Social Media Management</h3>
+        <p data-i18n="svc3_desc">Content planning, copywriting, design, community management, and monthly performance reporting.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1400&q=60" alt="Digital Advertising">
+        <h3 data-i18n="svc4_title">Digital Ads</h3>
+        <p data-i18n="svc4_desc">Meta Ads, Google Ads, TikTok Ads, retargeting, and conversion funnel optimization to increase ROI.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=60" alt="Live Streaming and Multimedia">
+        <h3 data-i18n="svc5_title">Live Streaming & Multimedia</h3>
+        <p data-i18n="svc5_desc">Professional live streaming setup, brand video, product showcase, editing, and multimedia production.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1400&q=60" alt="Analytics and Automation">
+        <h3 data-i18n="svc6_title">Analytics & Automation</h3>
+        <p data-i18n="svc6_desc">Google Analytics setup, conversion tracking, dashboards, CRM, and WhatsApp automation for scalable operations.</p>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- HERO -->
-  <header id="home">
-    <div class="container hero">
-      <div>
-        <div class="hero-badge">
-          <span class="dot"></span>
-          <span data-i18n="badge">Enterprise-ready digital agency for growth</span>
-        </div>
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <h2 data-i18n="port_title">Portfolio</h2>
+    <p class="subtitle" data-i18n="port_subtitle">
+      Selected projects delivered by Exmind Digital ecosystem.
+    </p>
 
-        <h1 data-i18n="hero_title">Scale Your Business with Strategy, Design & Technology</h1>
-        <p data-i18n="hero_desc">
-          Exmind Digital helps startups, UMKM, and corporate brands build high-converting websites, strong branding,
-          and measurable digital performance—without wasting budget.
-        </p>
-
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#contact" data-i18n="hero_cta1">Get Free Consultation</a>
-          <a class="btn btn-ghost" href="#portfolio" data-i18n="hero_cta2">See Portfolio</a>
-        </div>
+    <div class="portfolio-grid">
+      <div class="project">
+        <h3>Commenta</h3>
+        <p data-i18n="port_desc">Interactive platform built with modern UI and performance-first approach.</p>
+        <a href="https://commenta-nine.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
       </div>
 
-      <aside class="hero-side">
-        <img class="logo-big" src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital Logo Large">
-        <div class="mini-points">
-          <div class="mini-point"><b>✔</b> <span data-i18n="point1">SEO-ready structure & performance optimization</span></div>
-          <div class="mini-point"><b>✔</b> <span data-i18n="point2">Funnel landing page + conversion copywriting</span></div>
-          <div class="mini-point"><b>✔</b> <span data-i18n="point3">Corporate / Startup premium visual system</span></div>
-        </div>
-      </aside>
-    </div>
-  </header>
-
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2 data-i18n="services_title">Our Digital Services</h2>
-          <p data-i18n="services_desc">End-to-end digital services designed to increase trust, traffic, and conversion.</p>
-        </div>
+      <div class="project">
+        <h3>UndanganMu</h3>
+        <p data-i18n="port_desc2">Digital invitation landing page with premium experience.</p>
+        <a href="https://undanganmu-nine.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
       </div>
 
-      <div class="grid">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=60" alt="Website & App Development">
-          <div class="pad">
-            <h3 data-i18n="s1_title">Website & App Development</h3>
-            <p data-i18n="s1_desc">Company profile, landing page, e-commerce, and custom web apps.</p>
-          </div>
-        </div>
+      <div class="project">
+        <h3>Scorpio AI</h3>
+        <p data-i18n="port_desc3">AI-based interface demo with futuristic corporate layout.</p>
+        <a href="https://scorpio-ai.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
+      </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=60" alt="Branding & Design">
-          <div class="pad">
-            <h3 data-i18n="s2_title">Branding & Creative Design</h3>
-            <p data-i18n="s2_desc">Logo, brand identity, guideline, and campaign-ready creative assets.</p>
-          </div>
-        </div>
+      <div class="project">
+        <h3>Lumen</h3>
+        <p data-i18n="port_desc4">Modern landing UI for digital product showcase.</p>
+        <a href="https://lumen-ochre.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
+      </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=1200&q=60" alt="Social Media Management">
-          <div class="pad">
-            <h3 data-i18n="s3_title">Social Media Management</h3>
-            <p data-i18n="s3_desc">Strategy, content plan, copywriting, feed design, and reporting.</p>
-          </div>
-        </div>
+      <div class="project">
+        <h3>Creavo</h3>
+        <p data-i18n="port_desc5">Creative website concept with smooth flow and conversion blocks.</p>
+        <a href="https://creavo-orcin.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
+      </div>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=1200&q=60" alt="Digital Ads">
-          <div class="pad">
-            <h3 data-i18n="s4_title">Digital Ads & Funnel</h3>
-            <p data-i18n="s4_desc">Meta, Google, TikTok Ads with conversion tracking & retargeting.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=60" alt="SEO Optimization">
-          <div class="pad">
-            <h3 data-i18n="s5_title">SEO & Optimization</h3>
-            <p data-i18n="s5_desc">Keyword research, technical SEO, on-page optimization, audit.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=60" alt="Analytics Automation">
-          <div class="pad">
-            <h3 data-i18n="s6_title">Analytics & Automation</h3>
-            <p data-i18n="s6_desc">Google Analytics, dashboards, CRM setup, WhatsApp automation.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=60" alt="E-commerce Management">
-          <div class="pad">
-            <h3 data-i18n="s7_title">Social Commerce & E-Commerce</h3>
-            <p data-i18n="s7_desc">Store setup, product listing, campaign calendar, and growth strategy.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1581092335397-9fa341108bfe?auto=format&fit=crop&w=1200&q=60" alt="Live Streaming Multimedia">
-          <div class="pad">
-            <h3 data-i18n="s8_title">Live Streaming & Multimedia</h3>
-            <p data-i18n="s8_desc">Live streaming setup, video production, and brand multimedia content.</p>
-          </div>
-        </div>
+      <div class="project">
+        <h3>Scorpio Code</h3>
+        <p data-i18n="port_desc6">Developer-focused project page with clean structure.</p>
+        <a href="https://scorpio-code.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2 data-i18n="portfolio_title">Portfolio</h2>
-          <p data-i18n="portfolio_desc">Selected projects delivered by Exmind Digital ecosystem.</p>
-        </div>
-      </div>
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 data-i18n="contact_title">Contact Us</h2>
+    <p class="subtitle" data-i18n="contact_subtitle">
+      Tell us your goals. We’ll respond with a clear strategy, timeline, and cost estimate.
+    </p>
 
-      <div class="portfolio">
-        <div class="project">
-          <h4>Commenta</h4>
-          <p data-i18n="p_desc">Modern web platform (Vercel deployment).</p>
-          <a href="https://commenta-nine.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
+    <form onsubmit="sendToWhatsApp(event)">
+      <input id="name" type="text" placeholder="Your Name" required>
+      <input id="email" type="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" data-i18n="contact_btn">Send Message</button>
+    </form>
+  </div>
+</section>
 
-        <div class="project">
-          <h4>Undanganmu</h4>
-          <p data-i18n="p_desc">Landing page & digital invitation platform.</p>
-          <a href="https://undanganmu-nine.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
+<footer>
+  <p>&copy; 2025 Exmind Digital. All rights reserved.</p>
+</footer>
 
-        <div class="project">
-          <h4>Scorpio AI</h4>
-          <p data-i18n="p_desc">AI-based interactive web experience.</p>
-          <a href="https://scorpio-ai.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
+<!-- WhatsApp Floating -->
+<a class="wa-float" href="https://wa.me/6289652435067" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+  💬
+</a>
 
-        <div class="project">
-          <h4>Lumen</h4>
-          <p data-i18n="p_desc">Premium corporate landing experience.</p>
-          <a href="https://lumen-ochre.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
+<script>
+  // Mobile Navbar Toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const links = document.querySelector(".nav-links");
 
-        <div class="project">
-          <h4>Creavo</h4>
-          <p data-i18n="p_desc">Creative agency style web design.</p>
-          <a href="https://creavo-orcin.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
+  toggle.addEventListener("click", () => {
+    const isOpen = links.classList.toggle("show");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    toggle.innerHTML = isOpen ? "✕" : "☰";
+  });
 
-        <div class="project">
-          <h4>Scorpio Code</h4>
-          <p data-i18n="p_desc">Developer-focused product landing.</p>
-          <a href="https://scorpio-code.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
-
-        <div class="project">
-          <h4>Ourusin.id</h4>
-          <p data-i18n="p_desc">Service-based website platform.</p>
-          <a href="https://oerusin.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
-
-        <div class="project">
-          <h4>Azuridental</h4>
-          <p data-i18n="p_desc">Dental clinic modern website.</p>
-          <a href="https://azuridental.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
-
-        <div class="project">
-          <h4>Rifki Auliya Law Firm</h4>
-          <p data-i18n="p_desc">Professional legal firm website.</p>
-          <a href="https://rifkiauliyalawfirm.vercel.app/" target="_blank" rel="noopener">Visit Project →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2 data-i18n="pricing_title">Packages</h2>
-          <p data-i18n="pricing_desc">Flexible packages for UMKM, startup, and enterprise needs.</p>
-        </div>
-      </div>
-
-      <div class="pricing">
-        <div class="price">
-          <div class="tag" data-i18n="pack1_tag">Starter</div>
-          <h3 data-i18n="pack1_title">Landing Page / Company Profile</h3>
-          <div class="num" data-i18n="pack1_price">Custom Quote</div>
-          <ul>
-            <li data-i18n="pack1_a">1–5 pages + mobile responsive</li>
-            <li data-i18n="pack1_b">Basic SEO + speed optimization</li>
-            <li data-i18n="pack1_c">WhatsApp integration</li>
-          </ul>
-        </div>
-
-        <div class="price featured">
-          <div class="tag" data-i18n="pack2_tag">Most Popular</div>
-          <h3 data-i18n="pack2_title">Growth Funnel Website</h3>
-          <div class="num" data-i18n="pack2_price">Custom Quote</div>
-          <ul>
-            <li data-i18n="pack2_a">High-conversion copywriting</li>
-            <li data-i18n="pack2_b">Analytics + conversion tracking</li>
-            <li data-i18n="pack2_c">SEO-ready structure</li>
-          </ul>
-        </div>
-
-        <div class="price">
-          <div class="tag" data-i18n="pack3_tag">Enterprise</div>
-          <h3 data-i18n="pack3_title">Full Digital System</h3>
-          <div class="num" data-i18n="pack3_price">Custom Quote</div>
-          <ul>
-            <li data-i18n="pack3_a">Custom web app + CMS ready</li>
-            <li data-i18n="pack3_b">Multi-language system</li>
-            <li data-i18n="pack3_c">Brand guideline + UI system</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-head">
-        <div>
-          <h2 data-i18n="contact_title">Start a Project</h2>
-          <p data-i18n="contact_desc">Tell us your goals. We will respond within 24 hours.</p>
-        </div>
-      </div>
-
-      <div class="contact-wrap">
-        <form onsubmit="sendWA(event)">
-          <input id="name" type="text" placeholder="Your Name" required />
-          <input id="email" type="email" placeholder="Your Email" required />
-          <textarea id="message" placeholder="Your Message" required></textarea>
-          <button class="btn btn-primary" type="submit" data-i18n="contact_btn">Send via WhatsApp</button>
-        </form>
-
-        <div class="contact-box">
-          <h3 data-i18n="contact_side_title">Contact</h3>
-          <p data-i18n="contact_side_desc">Let’s discuss your website, branding, and growth strategy.</p>
-
-          <div class="contact-list">
-            <div><b>WhatsApp:</b> +62 896-5243-5067</div>
-            <div><b>Instagram:</b> @exminddigital</div>
-            <div><b>Website:</b> www.Astria-Group.com</div>
-          </div>
-
-          <div style="margin-top:16px">
-            <a class="btn btn-ghost" href="#portfolio" data-i18n="contact_side_btn">See Our Work</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 Exmind Digital. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- WHATSAPP FLOATING -->
-  <a class="wa-float" href="https://wa.me/6289652435067" target="_blank" rel="noopener">
-    <span>WhatsApp</span> 💬
-  </a>
-
-  <script>
-    // NAV MOBILE
-    const toggle = document.querySelector(".nav-toggle");
-    const links = document.querySelector(".nav-links");
-
-    toggle.addEventListener("click", () => {
-      const isOpen = links.classList.toggle("show");
-      toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      toggle.innerHTML = isOpen ? "✕" : "☰";
+  document.querySelectorAll(".nav-links a").forEach(a => {
+    a.addEventListener("click", () => {
+      links.classList.remove("show");
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.innerHTML = "☰";
     });
+  });
 
-    document.querySelectorAll(".nav-links a").forEach(a => {
-      a.addEventListener("click", () => {
-        links.classList.remove("show");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.innerHTML = "☰";
-      });
-    });
+  // Multi-language
+  const dict = {
+    en: {
+      nav_services: "Services",
+      nav_portfolio: "Portfolio",
+      nav_contact: "Contact",
+      nav_cta: "Start Project",
 
-    // MULTI LANGUAGE
-    const dict = {
-      en: {
-        nav_services: "Services",
-        nav_portfolio: "Portfolio",
-        nav_pricing: "Packages",
-        nav_contact: "Contact",
-        nav_cta: "Start Project",
+      hero_title: "Elevate Your Brand with Exmind Digital",
+      hero_desc: "Grow your brand through content, social media, technology, and performance-driven digital strategies.",
+      hero_btn1: "View Our Services",
+      hero_btn2: "Start a Project",
 
-        badge: "Enterprise-ready digital agency for growth",
-        hero_title: "Scale Your Business with Strategy, Design & Technology",
-        hero_desc: "Exmind Digital helps startups, UMKM, and corporate brands build high-converting websites, strong branding, and measurable digital performance—without wasting budget.",
-        hero_cta1: "Get Free Consultation",
-        hero_cta2: "See Portfolio",
+      services_title: "Our Expertise",
+      services_subtitle: "Premium services built for startups, SMEs, and enterprise teams who want measurable growth.",
 
-        point1: "SEO-ready structure & performance optimization",
-        point2: "Funnel landing page + conversion copywriting",
-        point3: "Corporate / Startup premium visual system",
+      svc1_title: "Website & App Development",
+      svc1_desc: "Landing page, company profile, e-commerce, and custom web apps with speed, security, and SEO-ready structure.",
 
-        services_title: "Our Digital Services",
-        services_desc: "End-to-end digital services designed to increase trust, traffic, and conversion.",
+      svc2_title: "Branding & Creative Design",
+      svc2_desc: "Logo, visual identity system, creative assets, motion graphics, and brand guidelines for premium positioning.",
 
-        s1_title: "Website & App Development",
-        s1_desc: "Company profile, landing page, e-commerce, and custom web apps.",
-        s2_title: "Branding & Creative Design",
-        s2_desc: "Logo, brand identity, guideline, and campaign-ready creative assets.",
-        s3_title: "Social Media Management",
-        s3_desc: "Strategy, content plan, copywriting, feed design, and reporting.",
-        s4_title: "Digital Ads & Funnel",
-        s4_desc: "Meta, Google, TikTok Ads with conversion tracking & retargeting.",
-        s5_title: "SEO & Optimization",
-        s5_desc: "Keyword research, technical SEO, on-page optimization, audit.",
-        s6_title: "Analytics & Automation",
-        s6_desc: "Google Analytics, dashboards, CRM setup, WhatsApp automation.",
-        s7_title: "Social Commerce & E-Commerce",
-        s7_desc: "Store setup, product listing, campaign calendar, and growth strategy.",
-        s8_title: "Live Streaming & Multimedia",
-        s8_desc: "Live streaming setup, video production, and brand multimedia content.",
+      svc3_title: "Social Media Management",
+      svc3_desc: "Content planning, copywriting, design, community management, and monthly performance reporting.",
 
-        portfolio_title: "Portfolio",
-        portfolio_desc: "Selected projects delivered by Exmind Digital ecosystem.",
-        p_desc: "Modern web platform (Vercel deployment).",
+      svc4_title: "Digital Ads",
+      svc4_desc: "Meta Ads, Google Ads, TikTok Ads, retargeting, and conversion funnel optimization to increase ROI.",
 
-        pricing_title: "Packages",
-        pricing_desc: "Flexible packages for UMKM, startup, and enterprise needs.",
-        pack1_tag: "Starter",
-        pack1_title: "Landing Page / Company Profile",
-        pack1_price: "Custom Quote",
-        pack1_a: "1–5 pages + mobile responsive",
-        pack1_b: "Basic SEO + speed optimization",
-        pack1_c: "WhatsApp integration",
+      svc5_title: "Live Streaming & Multimedia",
+      svc5_desc: "Professional live streaming setup, brand video, product showcase, editing, and multimedia production.",
 
-        pack2_tag: "Most Popular",
-        pack2_title: "Growth Funnel Website",
-        pack2_price: "Custom Quote",
-        pack2_a: "High-conversion copywriting",
-        pack2_b: "Analytics + conversion tracking",
-        pack2_c: "SEO-ready structure",
+      svc6_title: "Analytics & Automation",
+      svc6_desc: "Google Analytics setup, conversion tracking, dashboards, CRM, and WhatsApp automation for scalable operations.",
 
-        pack3_tag: "Enterprise",
-        pack3_title: "Full Digital System",
-        pack3_price: "Custom Quote",
-        pack3_a: "Custom web app + CMS ready",
-        pack3_b: "Multi-language system",
-        pack3_c: "Brand guideline + UI system",
+      port_title: "Portfolio",
+      port_subtitle: "Selected projects delivered by Exmind Digital ecosystem.",
+      port_desc: "Interactive platform built with modern UI and performance-first approach.",
+      port_desc2: "Digital invitation landing page with premium experience.",
+      port_desc3: "AI-based interface demo with futuristic corporate layout.",
+      port_desc4: "Modern landing UI for digital product showcase.",
+      port_desc5: "Creative website concept with smooth flow and conversion blocks.",
+      port_desc6: "Developer-focused project page with clean structure.",
 
-        contact_title: "Start a Project",
-        contact_desc: "Tell us your goals. We will respond within 24 hours.",
-        contact_btn: "Send via WhatsApp",
-        contact_side_title: "Contact",
-        contact_side_desc: "Let’s discuss your website, branding, and growth strategy.",
-        contact_side_btn: "See Our Work"
-      },
+      contact_title: "Contact Us",
+      contact_subtitle: "Tell us your goals. We’ll respond with a clear strategy, timeline, and cost estimate.",
+      contact_btn: "Send Message"
+    },
 
-      id: {
-        nav_services: "Layanan",
-        nav_portfolio: "Portofolio",
-        nav_pricing: "Paket",
-        nav_contact: "Kontak",
-        nav_cta: "Mulai Proyek",
+    id: {
+      nav_services: "Layanan",
+      nav_portfolio: "Portofolio",
+      nav_contact: "Kontak",
+      nav_cta: "Mulai Proyek",
 
-        badge: "Digital agency premium siap untuk bisnis yang ingin bertumbuh",
-        hero_title: "Scale Bisnis Anda dengan Strategi, Desain & Teknologi",
-        hero_desc: "Exmind Digital membantu UMKM, startup, dan corporate membangun website high-conversion, branding kuat, dan performa digital yang terukur—tanpa buang budget.",
-        hero_cta1: "Konsultasi Gratis",
-        hero_cta2: "Lihat Portofolio",
+      hero_title: "Scale Brand Anda Bersama Exmind Digital",
+      hero_desc: "Tumbuhkan brand melalui konten, sosial media, teknologi, dan strategi digital berbasis performa.",
+      hero_btn1: "Lihat Layanan",
+      hero_btn2: "Mulai Proyek",
 
-        point1: "Struktur SEO-ready + optimasi performa",
-        point2: "Landing funnel + copywriting konversi",
-        point3: "Tampilan corporate / startup premium",
+      services_title: "Keahlian Kami",
+      services_subtitle: "Layanan premium untuk startup, UMKM, hingga enterprise yang ingin pertumbuhan nyata.",
 
-        services_title: "Layanan Digital Kami",
-        services_desc: "Layanan end-to-end untuk meningkatkan trust, traffic, dan konversi.",
+      svc1_title: "Website & Aplikasi Developer",
+      svc1_desc: "Landing page, company profile, e-commerce, hingga custom web app dengan speed, security, dan struktur SEO-ready.",
 
-        s1_title: "Website & Aplikasi",
-        s1_desc: "Company profile, landing page, e-commerce, dan web apps custom.",
-        s2_title: "Branding & Desain Kreatif",
-        s2_desc: "Logo, identitas brand, guideline, dan aset kreatif untuk campaign.",
-        s3_title: "Manajemen Sosial Media",
-        s3_desc: "Strategi, konten plan, copywriting, desain feed, dan laporan performa.",
-        s4_title: "Iklan Digital & Funnel",
-        s4_desc: "Meta, Google, TikTok Ads dengan tracking konversi & retargeting.",
-        s5_title: "SEO & Optimasi",
-        s5_desc: "Riset keyword, technical SEO, on-page, dan audit performa website.",
-        s6_title: "Analytics & Automasi",
-        s6_desc: "Google Analytics, dashboard, CRM setup, automasi WhatsApp.",
-        s7_title: "Sosmed & E-Commerce",
-        s7_desc: "Setup toko, listing produk, kalender campaign, strategi growth.",
-        s8_title: "Live Streaming & Multimedia",
-        s8_desc: "Setup live streaming, produksi video, dan konten multimedia brand.",
+      svc2_title: "Branding & Creative Design",
+      svc2_desc: "Logo, sistem identitas visual, aset kreatif, motion graphic, dan brand guideline untuk positioning premium.",
 
-        portfolio_title: "Portofolio",
-        portfolio_desc: "Beberapa project yang telah dikerjakan oleh ekosistem Exmind Digital.",
-        p_desc: "Platform modern berbasis web (deploy Vercel).",
+      svc3_title: "Sosmed & E-commerce Management",
+      svc3_desc: "Perencanaan konten, copywriting, desain, community management, dan laporan performa bulanan.",
 
-        pricing_title: "Paket",
-        pricing_desc: "Paket fleksibel untuk UMKM, startup, hingga enterprise.",
-        pack1_tag: "Starter",
-        pack1_title: "Landing Page / Company Profile",
-        pack1_price: "Harga Menyesuaikan",
-        pack1_a: "1–5 halaman + mobile responsive",
-        pack1_b: "Basic SEO + speed optimization",
-        pack1_c: "Integrasi WhatsApp",
+      svc4_title: "Digital Ads",
+      svc4_desc: "Meta Ads, Google Ads, TikTok Ads, retargeting, dan optimasi funnel untuk meningkatkan ROI.",
 
-        pack2_tag: "Paling Favorit",
-        pack2_title: "Growth Funnel Website",
-        pack2_price: "Harga Menyesuaikan",
-        pack2_a: "Copywriting high-conversion",
-        pack2_b: "Analytics + tracking konversi",
-        pack2_c: "Struktur SEO-ready",
+      svc5_title: "Live Streaming & Multimedia",
+      svc5_desc: "Setup live streaming profesional, video brand, showcase produk, editing, dan produksi multimedia.",
 
-        pack3_tag: "Enterprise",
-        pack3_title: "Full Digital System",
-        pack3_price: "Harga Menyesuaikan",
-        pack3_a: "Web app custom + CMS ready",
-        pack3_b: "Sistem multi-bahasa",
-        pack3_c: "Brand guideline + UI system",
+      svc6_title: "Analytics & Automation",
+      svc6_desc: "Setup Google Analytics, tracking konversi, dashboard, CRM, dan WhatsApp automation untuk scaling bisnis.",
 
-        contact_title: "Mulai Proyek",
-        contact_desc: "Ceritakan kebutuhan Anda. Kami respon maksimal 24 jam.",
-        contact_btn: "Kirim via WhatsApp",
-        contact_side_title: "Kontak",
-        contact_side_desc: "Diskusikan website, branding, dan strategi growth bisnis Anda.",
-        contact_side_btn: "Lihat Portofolio"
+      port_title: "Portofolio",
+      port_subtitle: "Beberapa project pilihan yang dikerjakan oleh ekosistem Exmind Digital.",
+      port_desc: "Platform interaktif dengan UI modern dan performa tinggi.",
+      port_desc2: "Landing page undangan digital dengan pengalaman premium.",
+      port_desc3: "Demo UI berbasis AI dengan konsep futuristik corporate.",
+      port_desc4: "Landing modern untuk showcase digital product.",
+      port_desc5: "Konsep website kreatif dengan alur dan blok konversi.",
+      port_desc6: "Project developer dengan struktur clean dan rapi.",
+
+      contact_title: "Hubungi Kami",
+      contact_subtitle: "Sampaikan kebutuhan Anda. Kami akan respon dengan strategi, timeline, dan estimasi biaya.",
+      contact_btn: "Kirim Pesan"
+    }
+  };
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    localStorage.setItem("exmind_lang", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.getAttribute("data-i18n");
+      if(dict[lang] && dict[lang][key]){
+        el.textContent = dict[lang][key];
       }
-    };
-
-    function setLang(lang){
-      document.documentElement.setAttribute("data-lang", lang);
-      document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if(dict[lang] && dict[lang][key]) el.innerText = dict[lang][key];
-      });
-
-      document.querySelectorAll(".lang-btn").forEach(b => b.classList.remove("active"));
-      document.querySelector(`.lang-btn[data-lang="${lang}"]`).classList.add("active");
-    }
-
-    document.querySelectorAll(".lang-btn").forEach(btn => {
-      btn.addEventListener("click", () => setLang(btn.dataset.lang));
     });
+  }
 
-    // Default EN
-    setLang("en");
-
-    // CONTACT -> WhatsApp
-    function sendWA(e){
+  document.querySelectorAll(".lang-switch").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{
       e.preventDefault();
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const msg = document.getElementById("message").value.trim();
+      setLang(btn.getAttribute("data-lang"));
+    });
+  });
 
-      const text =
-        `Hello Exmind Digital,%0A%0A` +
-        `Name: ${encodeURIComponent(name)}%0A` +
-        `Email: ${encodeURIComponent(email)}%0A%0A` +
-        `Message:%0A${encodeURIComponent(msg)}%0A%0A` +
-        `Sent from Exmind Digital website.`;
+  const savedLang = localStorage.getItem("exmind_lang") || "en";
+  setLang(savedLang);
 
-      window.open(`https://wa.me/6289652435067?text=${text}`, "_blank");
-    }
-    window.sendWA = sendWA;
-  </script>
+  // Contact Form -> WhatsApp
+  function sendToWhatsApp(e){
+    e.preventDefault();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const text = `Hello Exmind Digital,%0A%0AName: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0AMessage: ${encodeURIComponent(message)}`;
+    window.open(`https://wa.me/6289652435067?text=${text}`, "_blank");
+  }
+</script>
 
 </body>
 </html>
