@@ -737,6 +737,29 @@
 
   <!-- HERO -->
   <header class="hero" id="top">
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a href="#home" class="brand">
+          <img class="brand-logo" src="https://raw.githubusercontent.com/jenderal45/exmind/main/img/Gemini_Generated_Image_e7jmb9e7jmb9e7jm-removebg-preview.png" alt="Exmind Digital Logo">
+          <span class="brand-text">Exmind Digital</span>
+        </a>
+    
+        <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">
+          ☰
+        </button>
+    
+        <div class="nav-links">
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+          <a href="#" class="lang-switch" data-lang="id">ID</a>
+          <a href="#" class="lang-switch" data-lang="en">EN</a>
+          <a class="nav-cta" href="#contact">Start Project</a>
+        </div>
+      </div>
+    </nav>
+    
     <div class="container">
       <div class="hero-grid">
 
@@ -1184,6 +1207,165 @@
       mobilePanel.style.display = open ? "none" : "block";
     });
 
+    /* NAVBAR */
+    .nav{
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: rgba(12, 12, 16, 0.75);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    
+    .nav-inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 14px;
+    }
+    
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+      min-width: 0;
+    }
+    
+    .brand-logo{
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(0, 255, 214, 0.25));
+    }
+    
+    .brand-text{
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      font-size: 1rem;
+      white-space: nowrap;
+    }
+    
+    .nav-links{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    
+    .nav-links a{
+      text-decoration: none;
+      color: rgba(255,255,255,.85);
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+    }
+    
+    .nav-links a:hover{
+      color: #00ffd6;
+    }
+    
+    .nav-cta{
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #00ffd6;
+      color: #071012 !important;
+      font-weight: 700;
+    }
+    
+    /* Toggle (hamburger) */
+    .nav-toggle{
+      display: none;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.14);
+      color: #fff;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    
+    /* MOBILE NAV */
+    @media (max-width: 900px){
+      .nav-toggle{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    
+      .nav-links{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 72px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(10,10,14,0.95);
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        padding: 10px 14px 16px;
+      }
+    
+      .nav-links a{
+        padding: 14px 12px;
+        border-radius: 12px;
+        font-size: 1rem;
+      }
+    
+      .nav-links a:hover{
+        background: rgba(255,255,255,.05);
+      }
+    
+      .nav-links .nav-cta{
+        margin-top: 10px;
+        text-align: center;
+        padding: 14px;
+      }
+    
+      .nav-links.show{
+        display: flex;
+      }
+    
+      .brand-text{
+        font-size: 0.95rem;
+      }
+    
+      .brand-logo{
+        width: 46px;
+        height: 46px;
+      }
+    }
+    
+    /* HERO MOBILE FIX */
+    @media (max-width: 900px){
+      header{
+        padding: 70px 0 70px !important;
+      }
+    
+      header h1{
+        font-size: 2rem !important;
+        line-height: 1.15;
+      }
+    
+      header p{
+        font-size: 1.05rem !important;
+        margin-bottom: 26px !important;
+      }
+    
+      .cta-buttons{
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+    
+      .cta-buttons a{
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    
     // Smooth close mobile on click
     [...mobilePanel.querySelectorAll("a")].forEach(a => {
       a.addEventListener("click", () => mobilePanel.style.display = "none");
