@@ -1702,9 +1702,9 @@ Mohon info estimasi & timeline. Terima kasih.`;
 
     applyLang("id");
 
-    
-    let redirectURL = "";
-    
+
+    let redirectURL = null;
+
     function openPortal(url){
       redirectURL = url;
       document.getElementById("portal").style.display = "flex";
@@ -1712,12 +1712,18 @@ Mohon info estimasi & timeline. Terima kasih.`;
     
     function closePortal(){
       document.getElementById("portal").style.display = "none";
+      redirectURL = null;
     }
     
     function loginRedirect(){
-      // simulasi login sukses
-      if(redirectURL !== ""){
+    
+      const email = document.querySelector("input[type='email']").value;
+      const password = document.querySelector("input[type='password']").value;
+    
+      if(email === "admin@exmind.co.id" && password === "exmind123"){
         window.location.href = redirectURL;
+      }else{
+        alert("Invalid credentials");
       }
     }
 
