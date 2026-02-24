@@ -808,7 +808,16 @@
         -webkit-background-clip:text;
         -webkit-text-fill-color:transparent;
       }
-      
+
+      /* DATE STYLE */
+      .digital-date{
+        text-align:center;
+        font-size:14px;
+        color:var(--muted);
+        margin-bottom:8px;
+        letter-spacing:.5px;
+      }
+    
       .prayer-times{
         display:grid;
         grid-template-columns: repeat(3,1fr);
@@ -981,6 +990,7 @@
   <div class="home-time-wrapper">
     <div class="home-time-box">
       <div class="digital-clock" id="digitalClock">00:00:00</div>
+      <div class="digital-date" id="digitalDate">Senin, 1 Januari 2026</div>
       <div class="prayer-times">
         <div>Subuh: <span id="fajr">--:--</span></div>
         <div>Dzuhur: <span id="dhuhr">--:--</span></div>
@@ -1738,8 +1748,18 @@ Mohon info estimasi & timeline. Terima kasih.`;
         minute: '2-digit',
         second: '2-digit'
       };
-      const time = now.toLocaleTimeString('id-ID', options);
+        const optionsDate = {
+        timeZone: "Asia/Jakarta",
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+
+      const time = now.toLocaleTimeString('id-ID', optionsTime);
+      const date = now.toLocaleDateString('id-ID', optionsDate);
       document.getElementById("digitalClock").innerText = time;
+      document.getElementById("digitalDate").innerText = date;
     }
     setInterval(updateClock,1000);
     updateClock();
