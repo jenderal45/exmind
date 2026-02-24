@@ -779,22 +779,31 @@
 
     /* =========================
          DIGITAL CLOCK & ADZAN
+         RESPONSIVE VERSION
       ========================= */
       
+      .home-time-wrapper{
+        display:flex;
+        justify-content:center;
+        margin-top:60px;
+      }
+      
       .home-time-box{
-        margin-top:40px;
-        padding:24px;
-        border-radius:16px;
+        width:100%;
+        max-width:600px;
+        padding:28px;
+        border-radius:18px;
         background: linear-gradient(145deg,#0f172a,#0b1220);
         border:1px solid var(--border);
         backdrop-filter: blur(12px);
-        max-width:520px;
+        box-shadow: var(--shadow);
       }
       
       .digital-clock{
-        font-size:32px;
+        font-size:36px;
         font-weight:700;
-        margin-bottom:16px;
+        text-align:center;
+        margin-bottom:24px;
         background: linear-gradient(90deg,#6366f1,#a855f7);
         -webkit-background-clip:text;
         -webkit-text-fill-color:transparent;
@@ -802,15 +811,60 @@
       
       .prayer-times{
         display:grid;
-        grid-template-columns: repeat(2,1fr);
-        gap:10px;
+        grid-template-columns: repeat(3,1fr);
+        gap:14px;
+        text-align:center;
         font-size:14px;
         color:var(--muted);
       }
       
+      .prayer-times div{
+        padding:10px;
+        border-radius:10px;
+        background: rgba(255,255,255,.03);
+        border:1px solid var(--border);
+      }
+      
       .prayer-times span{
-        color:var(--text);
+        display:block;
+        margin-top:4px;
         font-weight:600;
+        color:var(--text);
+      }
+      
+      /* =========================
+         MOBILE ADJUSTMENT
+      ========================= */
+      
+      @media (max-width:768px){
+      
+        .home-time-wrapper{
+          margin-top:40px;
+          padding:0 16px;
+        }
+      
+        .home-time-box{
+          padding:22px;
+        }
+      
+        .digital-clock{
+          font-size:28px;
+        }
+      
+        .prayer-times{
+          grid-template-columns: repeat(2,1fr);
+          gap:10px;
+          font-size:13px;
+        }
+      
+      }
+      
+      @media (max-width:480px){
+      
+        .prayer-times{
+          grid-template-columns: 1fr;
+        }
+      
       }
   </style>
 </head>
@@ -924,14 +978,16 @@
   </header>
 
   <!-- DIGITAL CLOCK & PRAYER TIME -->
-  <div class="home-time-box">
-    <div class="digital-clock" id="digitalClock">00:00:00</div>
-    <div class="prayer-times">
-      <div>Subuh: <span id="fajr">--:--</span></div>
-      <div>Dzuhur: <span id="dhuhr">--:--</span></div>
-      <div>Ashar: <span id="asr">--:--</span></div>
-      <div>Maghrib: <span id="maghrib">--:--</span></div>
-      <div>Isya: <span id="isha">--:--</span></div>
+  <div class="home-time-wrapper">
+    <div class="home-time-box">
+      <div class="digital-clock" id="digitalClock">00:00:00</div>
+      <div class="prayer-times">
+        <div>Subuh: <span id="fajr">--:--</span></div>
+        <div>Dzuhur: <span id="dhuhr">--:--</span></div>
+        <div>Ashar: <span id="asr">--:--</span></div>
+        <div>Maghrib: <span id="maghrib">--:--</span></div>
+        <div>Isya: <span id="isha">--:--</span></div>
+      </div>
     </div>
   </div>
 
