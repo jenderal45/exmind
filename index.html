@@ -1597,26 +1597,26 @@ Mohon info estimasi & timeline. Terima kasih.`;
     }
 
     applyLang("id");
+
+    
+    let redirectURL = "";
+    
+    function openPortal(url){
+      redirectURL = url;
+      document.getElementById("portal").style.display = "flex";
+    }
+    
+    function closePortal(){
+      document.getElementById("portal").style.display = "none";
+    }
+    
+    function loginRedirect(){
+      // simulasi login sukses
+      if(redirectURL !== ""){
+        window.location.href = redirectURL;
+      }
+    }
+
   </script>
-  
-  <script>
-let redirectURL = "";
-
-function openPortal(url){
-  redirectURL = url;
-  document.getElementById("portal").style.display = "flex";
-}
-
-function closePortal(){
-  document.getElementById("portal").style.display = "none";
-}
-
-function loginRedirect(){
-  // simulasi login sukses
-  if(redirectURL !== ""){
-    window.location.href = redirectURL;
-  }
-}
-</script>
 </body>
 </html>
