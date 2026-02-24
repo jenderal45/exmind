@@ -721,6 +721,61 @@
     @media (min-width: 1200px){
       .container{ max-width: 1400px; }
     }
+
+    /* =========================
+        CENTRAL LOGIN PORTAL
+    ========================= */
+    
+    .portal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(6,9,20,.85);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    
+    .portal-box {
+      width: 420px;
+      background: linear-gradient(145deg, #0f172a, #0b1220);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      animation: fadeUp .4s ease;
+    }
+    
+    .portal-box h2 {
+      margin-bottom: 10px;
+    }
+    
+    .portal-box p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    
+    .portal-box input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      color: var(--text);
+    }
+    
+    .portal-close {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 14px;
+    }
   </style>
 </head>
 
@@ -968,7 +1023,7 @@
 
       <div class="card work">
         <div class="tag">Internal System</div>
-        <a href="https://absensi.exmind.co.id" target="_blank">
+        <a href="https://absensi.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>Absensi (HR Attendance)</strong><br><span>absensi.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -976,7 +1031,7 @@
 
       <div class="card work">
         <div class="tag">Core System</div>
-        <a href="https://erp.exmind.co.id" target="_blank">
+        <a href="https://erp.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>ERP</strong><br><span>erp.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -984,7 +1039,7 @@
 
       <div class="card work">
         <div class="tag">Sales</div>
-        <a href="https://crm.exmind.co.id" target="_blank">
+        <a href="https://crm.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>CRM & Sales Automation</strong><br><span>crm.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -992,7 +1047,7 @@
 
       <div class="card work">
         <div class="tag">Finance</div>
-        <a href="https://account.exmind.co.id" target="_blank">
+        <a href="https://account.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>Accounting System</strong><br><span>account.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -1000,7 +1055,7 @@
 
       <div class="card work">
         <div class="tag">Payment</div>
-        <a href="https://pay.exmind.co.id" target="_blank">
+        <a href="https://pay.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>Payment Gateway</strong><br><span>pay.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -1008,7 +1063,7 @@
 
       <div class="card work">
         <div class="tag">AI System</div>
-        <a href="https://ai.exmind.co.id" target="_blank">
+        <a href="https://ai.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>Business AI & Automation</strong><br><span>ai.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -1016,7 +1071,7 @@
 
       <div class="card work">
         <div class="tag">Infrastructure</div>
-        <a href="https://cloud.exmind.co.id" target="_blank">
+        <a href="https://cloud.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>Cloud & Security</strong><br><span>cloud.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -1024,7 +1079,7 @@
 
       <div class="card work">
         <div class="tag">Commerce</div>
-        <a href="https://commerce.exmind.co.id" target="_blank">
+        <a href="https://commerce.exmind.co.id" onclick="openPortal('https://erp.exmind.co.id')">
           <div><strong>Commerce (Marketplace + Website Builder)</strong><br><span>commerce.exmind.co.id</span></div>
           <span>↗</span>
         </a>
@@ -1218,7 +1273,24 @@
       </div>
     </div>
   </section>
-
+  
+    <!-- CENTRAL LOGIN PORTAL -->
+    <div class="portal-overlay" id="portal">
+      <div class="portal-close" onclick="closePortal()">Close ✕</div>
+    
+      <div class="portal-box">
+        <h2>Exmind Secure Access</h2>
+        <p>Sign in to access the Exmind Digital Ecosystem</p>
+    
+        <input type="email" placeholder="Email address">
+        <input type="password" placeholder="Password">
+    
+        <button class="btn btn-primary" style="width:100%" onclick="loginRedirect()">
+          Sign In
+        </button>
+      </div>
+    </div>
+  
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -1526,5 +1598,25 @@ Mohon info estimasi & timeline. Terima kasih.`;
 
     applyLang("id");
   </script>
+  
+  <script>
+let redirectURL = "";
+
+function openPortal(url){
+  redirectURL = url;
+  document.getElementById("portal").style.display = "flex";
+}
+
+function closePortal(){
+  document.getElementById("portal").style.display = "none";
+}
+
+function loginRedirect(){
+  // simulasi login sukses
+  if(redirectURL !== ""){
+    window.location.href = redirectURL;
+  }
+}
+</script>
 </body>
 </html>
