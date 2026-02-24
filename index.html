@@ -1748,31 +1748,39 @@ Mohon info estimasi & timeline. Terima kasih.`;
     // =============================
     // DIGITAL CLOCK (Jakarta WIB)
     // =============================
-    function updateClock(){
-      const now = new Date();
+      document.addEventListener("DOMContentLoaded", function(){
       
-      const options = { 
-        timeZone: "Asia/Jakarta",
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-      };
+        function updateClock(){
+          const now = new Date();
       
-        const optionsDate = {
-        timeZone: "Asia/Jakarta",
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      };
-
-      const time = now.toLocaleTimeString('id-ID', optionsTime);
-      const date = now.toLocaleDateString('id-ID', optionsDate);
-      document.getElementById("digitalClock").innerText = time;
-      document.getElementById("digitalDate").innerText = date;
-    }
-    setInterval(updateClock,1000);
-    updateClock();
+          const time = now.toLocaleTimeString("id-ID", {
+            timeZone: "Asia/Jakarta",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+          });
+      
+          const date = now.toLocaleDateString("id-ID", {
+            timeZone: "Asia/Jakarta",
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+          });
+      
+          const clockEl = document.getElementById("digitalClock");
+          const dateEl = document.getElementById("digitalDate");
+      
+          if(clockEl && dateEl){
+            clockEl.innerText = time;
+            dateEl.innerText = date;
+          }
+        }
+      
+        updateClock();
+        setInterval(updateClock,1000);
+      
+      });
     
     
     // =============================
